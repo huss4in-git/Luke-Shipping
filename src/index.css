@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  min-width: 200%;
+  animation: marquee 100s linear infinite;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'nb-thin';
+  src: url('./Fonts/500.woff2');
+}
+
+@keyframes marqueeReverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+  }
