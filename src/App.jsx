@@ -19,7 +19,7 @@ function Home() {
       <About />
       <Marquee />
       <Based />
-      <Marquee1 />
+      
       <Services />
     </div>
   );

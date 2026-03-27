@@ -23,7 +23,7 @@ export default function Based() {
     ];
 
     return (
-        <section className="py-34">
+        <section className="py-5">
             <div className="w-full px-6 xl:px-10 2xl:px-24">
 
                 {/* HEADING */}
@@ -40,7 +40,7 @@ export default function Based() {
 
                 {/* SINGLE ROW */}
                 <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-15">
                         {features.map((item, index) => (
                             <div
                                 key={index}
