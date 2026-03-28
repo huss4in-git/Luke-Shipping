@@ -253,7 +253,6 @@ export default function Navbar() {
             <div className="w-1/2 px-6 pt-12">
               <div className="space-y-2 text-[24px]">
                 <div
-                  onClick={() => setActiveMenu("shop")}
                   className="flex justify-between cursor-pointer"
                 >
                   <span>Services</span>

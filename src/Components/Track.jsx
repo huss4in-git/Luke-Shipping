@@ -22,11 +22,12 @@ export default function TrackShipmentSticky() {
           target="_blank"
           rel="noopener noreferrer"
           className={`
-            absolute bottom-[60px] left-0
-            bg-white h-[220px] w-[60px] flex items-center justify-center shadow-md
-            transform transition-transform duration-300 ease-in-out
-            ${show ? "translate-y-0" : "translate-y-full"}
-          `}
+  hidden md:flex
+  absolute bottom-[60px] left-0
+  bg-white h-[220px] w-[60px] items-center justify-center shadow-md
+  transform transition-transform duration-300 ease-in-out
+  ${show ? "translate-y-0" : "translate-y-full"}
+`}
           style={{ fontFamily: "nb-thin" }}
         >
           <span className="rotate-[-90deg] text-[16px] text-black whitespace-nowrap tracking-wide">

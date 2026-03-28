@@ -6,7 +6,7 @@ export default function About() {
     ];
 
     return (
-        <section className="px-1 md:px-2 py-30 ">
+        <section className="px-1 md:px-2 py-20 md:py-30 ">
 
             <div className="w-full px-6 xl:px-10 2xl:px-24">
 

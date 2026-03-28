@@ -23,7 +23,7 @@ export default function Based() {
     ];
 
     return (
-        <section className="py-5">
+        <section className="md:py-5">
             <div className="w-full px-6 xl:px-10 2xl:px-24">
 
                 {/* HEADING */}

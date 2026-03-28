@@ -9,7 +9,7 @@ export default function Services() {
     ];
 
     return (
-        <section className="px-1 md:px-2 py-30">
+        <section className="px-1 md:px-2 md:py-30 py-25">
             <div className="w-full px-6 xl:px-10 2xl:px-24">
 
                 {/* TITLE */}
@@ -31,34 +31,37 @@ export default function Services() {
                     {services.map((item, i) => (
                         <div key={i} className="bg-white rounded-[6px] overflow-hidden">
 
-               {/* IMAGE (GRAY ONLY HERE) */}
-<div className="bg-[#f3f3f3] flex items-center justify-center h-[150px]">
-    <img
-        src={item.image}
-        alt={item.title}
-        className={`${
-            item.title === "Road"
-                ? "h-40"
-                : item.title === "Sea"
-                ? "h-30"
-                : item.title === "Customs Clearance"
-                ? "h-28"
-                : item.title === "Warehousing & Distribution"
-                ? "h-23"
-                : item.title === "Projects Handling"
-                ? "h-30"
-                : "h-25"
-        } object-contain`}
-    />
-</div>
+                            {/* IMAGE (GRAY ONLY HERE) */}
+                            <div className="bg-[#f3f3f3] flex items-center justify-center h-[150px]">
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className={`${item.title === "Road"
+                                            ? "h-40"
+                                            : item.title === "Sea"
+                                                ? "h-30"
+                                                : item.title === "Customs Clearance"
+                                                    ? "h-28"
+                                                    : item.title === "Warehousing & Distribution"
+                                                        ? "h-23"
+                                                        : item.title === "Projects Handling"
+                                                            ? "h-30"
+                                                            : "h-25"
+                                        } object-contain`}
+                                />
+                            </div>
 
                             {/* BOTTOM ROW (WHITE) */}
                             <div className="px-4 py-4 flex items-center gap-3 text-sm">
 
                                 {/* TITLE */}
                                 <span className="text-black whitespace-nowrap">
-                                    {item.title}
-                                </span>
+    {item.title === "Warehousing & Distribution"
+        ? "Warehousing"
+        : item.title === "Customs Clearance"
+        ? "Customs"
+        : item.title}
+</span>
 
                                 {/* LINE */}
                                 <div className="flex-1 h-[0.5px] bg-gray-300 relative">
