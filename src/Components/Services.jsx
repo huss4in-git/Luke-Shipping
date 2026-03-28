@@ -37,16 +37,16 @@ export default function Services() {
                                     src={item.image}
                                     alt={item.title}
                                     className={`${item.title === "Road"
-                                            ? "h-40"
-                                            : item.title === "Sea"
-                                                ? "h-30"
-                                                : item.title === "Customs Clearance"
-                                                    ? "h-28"
-                                                    : item.title === "Warehousing & Distribution"
-                                                        ? "h-23"
-                                                        : item.title === "Projects Handling"
-                                                            ? "h-30"
-                                                            : "h-25"
+                                        ? "h-40"
+                                        : item.title === "Sea"
+                                            ? "h-30"
+                                            : item.title === "Customs Clearance"
+                                                ? "h-28"
+                                                : item.title === "Warehousing & Distribution"
+                                                    ? "h-23"
+                                                    : item.title === "Projects Handling"
+                                                        ? "h-30"
+                                                        : "h-25"
                                         } object-contain`}
                                 />
                             </div>
@@ -56,12 +56,12 @@ export default function Services() {
 
                                 {/* TITLE */}
                                 <span className="text-black whitespace-nowrap">
-    {item.title === "Warehousing & Distribution"
-        ? "Warehousing"
-        : item.title === "Customs Clearance"
-        ? "Customs"
-        : item.title}
-</span>
+                                    {item.title === "Warehousing & Distribution"
+                                        ? "Warehousing"
+                                        : item.title === "Customs Clearance"
+                                            ? "Customs"
+                                            : item.title}
+                                </span>
 
                                 {/* LINE */}
                                 <div className="flex-1 h-[0.5px] bg-gray-300 relative">

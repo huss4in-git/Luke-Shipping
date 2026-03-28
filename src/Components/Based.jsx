@@ -33,14 +33,14 @@ export default function Based() {
                     </h2>
 
                     <p className="text-black/60 max-w-3xl mx-auto text-[15px] leading-relaxed">
-                        Luke Shipping Company is dedicated to providing exceptional logistics services. <br />
+                        <span style={{ color: '#FD9708' }}>Luke Shipping Co.</span> is dedicated to providing exceptional logistics services. <br />
                         We employ a PDCA (Plan-Do-Check-Act) cycle to continuously improve our processes.
                     </p>
                 </div>
 
                 {/* SINGLE ROW */}
                 <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-15">
+                    <div className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-15">
                         {features.map((item, index) => (
                             <div
                                 key={index}
@@ -62,16 +62,19 @@ export default function Based() {
 
                 {/* CTA */}
                 <div className="text-center">
-                <a
-            href="https://www.gocomet.com/online-container-tracking/details/d24799e2-c743-4d24-a1fe-cb857d6d8019?shared=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-          >
-                    <button className="bg-[#FD9708] text-black px-8 py-3 rounded-full cursor-pointer text-sm font-medium hover:bg-black hover:text-white transition">
-                        TRACK SHIPMENT
-                    </button>
+                    <a
+                        href="https://www.gocomet.com/online-container-tracking/details/d24799e2-c743-4d24-a1fe-cb857d6d8019?shared=true"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onMouseEnter={() => setIsHovering(true)}
+                        onMouseLeave={() => setIsHovering(false)}
+                    >
+                        <button
+                            onClick={() => window.open("https://wa.me/918330061967", "_blank")}
+                            className="bg-[#FD9708] text-black px-8 py-3 rounded-full cursor-pointer text-sm font-medium hover:bg-black hover:text-white transition"
+                        >
+                            BOOK SHIPMENT
+                        </button>
                     </a>
                 </div>
 
