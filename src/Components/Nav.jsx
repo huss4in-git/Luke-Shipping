@@ -108,7 +108,7 @@ export default function Navbar() {
             >
               <img
                 src="/"
-                alt="Qahua Cultr"
+                alt=""
                 className="h-6"
               />
             </div>
