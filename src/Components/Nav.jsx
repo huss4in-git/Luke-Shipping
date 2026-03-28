@@ -88,7 +88,7 @@ export default function Navbar() {
               className="md:hidden flex items-center cursor-pointer"
             >
               <img
-                src="/logo.svg"
+                src="/"
                 alt="Logo"
                 className="h-6"
               />
@@ -107,7 +107,7 @@ export default function Navbar() {
               className="hidden md:flex items-center cursor-pointer"
             >
               <img
-                src="/logo.svg"
+                src="/"
                 alt="Qahua Cultr"
                 className="h-6"
               />
