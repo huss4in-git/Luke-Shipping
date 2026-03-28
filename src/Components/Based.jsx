@@ -62,9 +62,17 @@ export default function Based() {
 
                 {/* CTA */}
                 <div className="text-center">
-                    <button className="bg-[#FD9708] text-black px-8 py-3 rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
+                <a
+            href="https://www.gocomet.com/online-container-tracking/details/d24799e2-c743-4d24-a1fe-cb857d6d8019?shared=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
+                    <button className="bg-[#FD9708] text-black px-8 py-3 rounded-full cursor-pointer text-sm font-medium hover:bg-black hover:text-white transition">
                         TRACK SHIPMENT
                     </button>
+                    </a>
                 </div>
 
             </div>
