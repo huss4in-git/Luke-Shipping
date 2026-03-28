@@ -19,8 +19,10 @@ export default function About() {
                             className="text-3xl md:text-5xl leading-tight md:whitespace-nowrap"
                             style={{ fontFamily: "nb-thin" }}
                         >
-                            Your trusted partner across <br/>
+                            Your trusted partner across{" "}
+                            <br className="hidden md:block" />
                             continents
+                            
                         </h1>
                     </div>
 
@@ -31,7 +33,7 @@ export default function About() {
                         </p>
 
                         <p className="text-[15px] text-black/50 leading-relaxed max-w-[520px]">
-                            Luke Shipping Co. is a seasoned logistics provider with a rich history
+                            <span style={{color:'#FD9708'}}>Luke Shipping Co.</span> is a seasoned logistics provider with a rich history
                             spanning 11 years. Our unwavering commitment to excellence has positioned us as a
                             trusted partner for businesses seeking reliable and efficient supply chain solutions.
                             With a profound understanding of the intricate global supply chain, we offer tailored
