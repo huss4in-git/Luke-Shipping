@@ -211,7 +211,7 @@ export default function Road() {
                     </div>
                 </div>
             </div>
-            <About />
+        
         </>
     );
 }

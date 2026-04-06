@@ -22,7 +22,7 @@ function Home() {
       <Marquee />
       <Based />
       <Services />
-      <Footer />
+    
     </div>
   );
 }
