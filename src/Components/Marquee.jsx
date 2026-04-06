@@ -7,83 +7,83 @@ export default function Marquee() {
 
                 <div className="whitespace-nowrap flex animate-marquee text-3xl font-light text-white">
 
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
-                    <span className="mx-12">
-                        Your one-stop shop for all your transportation and logistics needs —
+                    <span className="mx-5">
+                        Your one-stop shop for all your transportation and logistics needs /
                     </span>
                 </div>
 

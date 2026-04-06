@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Services() {
+    const navigate = useNavigate();
+
     const services = [
         { title: "Road", image: "/road.png", size: "h-48" },
         { title: "Sea", image: "/sea1.png", size: "h-40" },
@@ -25,13 +29,21 @@ export default function Services() {
                     </div>
                 </div>
 
-                {/* ---------------- MOBILE (STACKED LIKE IMAGE) ---------------- */}
+                {/* ---------------- MOBILE ---------------- */}
                 <div className="md:hidden space-y-8">
 
                     {services.map((item, i) => (
-                        <div key={i} className="bg-white rounded-[6px] overflow-hidden">
+                        <div
+                            key={i}
+                            onClick={() => {
+                                if (item.title === "Road") {
+                                    navigate("/road");
+                                }
+                            }}
+                            className="bg-white rounded-[6px] overflow-hidden cursor-pointer"
+                        >
 
-                            {/* IMAGE (GRAY ONLY HERE) */}
+                            {/* IMAGE */}
                             <div className="bg-[#f3f3f3] flex items-center justify-center h-[150px]">
                                 <img
                                     src={item.image}
@@ -51,10 +63,8 @@ export default function Services() {
                                 />
                             </div>
 
-                            {/* BOTTOM ROW (WHITE) */}
+                            {/* BOTTOM */}
                             <div className="px-4 py-4 flex items-center gap-3 text-sm">
-
-                                {/* TITLE */}
                                 <span className="text-black whitespace-nowrap">
                                     {item.title === "Warehousing & Distribution"
                                         ? "Warehousing"
@@ -63,22 +73,14 @@ export default function Services() {
                                             : item.title}
                                 </span>
 
-                                {/* LINE */}
                                 <div className="flex-1 h-[0.5px] bg-gray-300 relative">
-
-                                    {/* LEFT CIRCLE */}
                                     <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-[#f3f3f3] rounded-full"></div>
-
-                                    {/* RIGHT CIRCLE */}
                                     <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-[#f3f3f3] rounded-full"></div>
-
                                 </div>
 
-                                {/* CTA */}
                                 <span className="text-black whitespace-nowrap">
                                     Learn more →
                                 </span>
-
                             </div>
 
                         </div>
@@ -86,12 +88,17 @@ export default function Services() {
 
                 </div>
 
-                {/* ---------------- DESKTOP (UNCHANGED) ---------------- */}
+                {/* ---------------- DESKTOP ---------------- */}
                 <div className="hidden md:grid md:grid-cols-3 gap-0.5 md:px-7" style={{ fontFamily: "nb-thin" }}>
 
                     {services.map((item, i) => (
                         <div
                             key={i}
+                            onClick={() => {
+                                if (item.title === "Road") {
+                                    navigate("/road");
+                                }
+                            }}
                             className="group relative bg-[#f3f3f3] rounded-[3px] h-[260px] overflow-hidden cursor-pointer"
                         >
                             {/* IMAGE */}

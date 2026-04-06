@@ -199,7 +199,7 @@ export default function Navbar() {
 
             <button
               onClick={() => navigate("/contact")}
-              className="bg-[#FD9708] text-black px-10 py-4 text-[13px] rounded-full uppercase tracking-wide hover:bg-black hover:text-white transition"
+              className="bg-[#FD9708] text-black cursor-pointer px-10 py-4 text-[13px] rounded-full uppercase tracking-wide hover:bg-black hover:text-white transition"
             >
               Request a Quote
             </button>
@@ -215,7 +215,7 @@ export default function Navbar() {
           </p>
           <button
             onClick={() => navigate("/contact")}
-            className="bg-[#FD9708] text-black px-8 py-4 text-[11px] rounded-full uppercase tracking-wide hover:bg-black hover:text-white transition"
+            className="bg-[#FD9708] cursor-pointer text-black px-8 py-4 text-[11px] rounded-full uppercase tracking-wide hover:bg-black hover:text-white transition"
           >
             Request a Quote
           </button>

@@ -9,6 +9,8 @@ import Marquee1 from './Components/Marquee1';
 import Based from './Components/Based';
 import Track from './Components/Track';
 import Services from './Components/Services';
+import Road from './Pages/Road';
+import Footer from './Components/Footer';
 
 
 function Home() {
@@ -19,8 +21,8 @@ function Home() {
       <About />
       <Marquee />
       <Based />
-      
       <Services />
+      <Footer />
     </div>
   );
 }
@@ -50,6 +52,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/road" element={<Road />} />
       </Routes>
     </Router>
   );
