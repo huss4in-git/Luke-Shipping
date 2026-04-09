@@ -29,8 +29,41 @@ export default function Services() {
                     </div>
                 </div>
 
+
+
                 {/* ---------------- MOBILE ---------------- */}
                 <div className="md:hidden space-y-8">
+
+                    {/* TIC CARD (MOBILE ONLY) */}
+                    <div
+                        onClick={() => navigate("/tic")}
+                        className="bg-white rounded-[6px] overflow-hidden cursor-pointer"
+                    >
+                        {/* IMAGE */}
+                        <div className="bg-[#f3f3f3] flex items-center justify-center h-[150px]">
+                            <img
+                                src="/tic1.png"
+                                alt="TIC Services"
+                                className="h-25 object-contain"
+                            />
+                        </div>
+
+                        {/* BOTTOM */}
+                        <div className="px-4 py-4 flex items-center gap-3 text-sm">
+                            <span className="text-black whitespace-nowrap">
+                                TIC Services
+                            </span>
+
+                            <div className="flex-1 h-[0.5px] bg-gray-300 relative">
+                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-[#f3f3f3] rounded-full"></div>
+                                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-[#f3f3f3] rounded-full"></div>
+                            </div>
+
+                            <span className="text-black whitespace-nowrap">
+                                Learn more →
+                            </span>
+                        </div>
+                    </div>
 
                     {services.map((item, i) => (
                         <div
@@ -88,8 +121,12 @@ export default function Services() {
 
                 </div>
 
+
                 {/* ---------------- DESKTOP ---------------- */}
-                <div className="hidden md:grid md:grid-cols-3 gap-0.5 md:px-7" style={{ fontFamily: "nb-thin" }}>
+                <div
+                    className="hidden md:grid md:grid-cols-3 gap-0.5 md:px-7"
+                    style={{ fontFamily: "nb-thin" }}
+                >
 
                     {services.map((item, i) => (
                         <div
@@ -132,6 +169,47 @@ export default function Services() {
                         </div>
                     ))}
 
+                </div>
+
+                {/* ================= TIC FEATURE STRIP ================= */}
+                <div className="hidden md:block md:px-7 mt-10">
+                    <div
+                        onClick={() => navigate("/tic")}
+                        className="bg-[#f3f3f3] rounded-[3px] overflow-hidden group cursor-pointer relative"
+                    >
+
+                        {/* HOVER OVERLAY (MUST BE HERE) */}
+                        <div className="absolute inset-0 bg-[#FD9708] opacity-0 group-hover:opacity-100 transition duration-500 z-10"></div>
+
+                        <div className="grid md:grid-cols-3 h-[220px] relative z-20">
+
+                            {/* COL 1 */}
+                            <div className="flex items-center justify-center">
+                                <img src="/tic1.png" alt="TIC Services" className="h-35 object-contain" />
+                            </div>
+                            <div></div>
+
+                            {/* COL 3 */}
+                            <div className="flex flex-col justify-center px-6 md:px-5">
+                                <h2 className="text-sm tracking-wide transition group-hover:text-white" style={{ fontFamily: 'nb-thin' }}>
+                                    TIC Services
+                                </h2>
+
+                                <p className="text-sm opacity-70 mt-2 transition group-hover:text-white" style={{ fontFamily: 'nb-thin' }}>
+                                    Testing • Inspection • Certification
+                                </p>
+                            </div>
+
+                        </div>
+
+                        {/* LEARN MORE */}
+                        <div className="absolute bottom-6 right-6 md:right-5 z-20">
+                            <span className="text-sm opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-white" style={{ fontFamily: 'nb-thin' }}>
+                                Learn more →
+                            </span>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
