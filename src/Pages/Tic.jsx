@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import About from "../Components/About";
+import Footer from "../Components/Footer";
 
 export default function Tic() {
     const [shopOpen, setShopOpen] = useState(false);
