@@ -5,8 +5,9 @@ export default function Services() {
 
     const services = [
         { title: "Road", image: "/road.png", size: "h-48" },
+        { title: "Air", image: "/air.png", size: "h-30" },
         { title: "Sea", image: "/sea1.png", size: "h-40" },
-        { title: "Air", image: "/air.png", size: "h-35" },
+        
         { title: "Customs Clearance", image: "/customs.png", size: "h-40" },
         { title: "Warehousing & Distribution", image: "/warehouse.png", size: "h-30" },
         { title: "Projects Handling", image: "/project1.png", size: "h-45" },
@@ -69,9 +70,16 @@ export default function Services() {
                         <div
                             key={i}
                             onClick={() => {
-                                if (item.title === "Road") {
-                                    navigate("/road");
-                                }
+                                const routes = {
+                                    "Road": "/road",
+                                    "Sea": "/sea",
+                                    "Air": "/air",
+                                    "Customs Clearance": "/customs",
+                                    "Warehousing & Distribution": "/warehousing",
+                                    "Projects Handling": "/projects",
+                                };
+                            
+                                navigate(routes[item.title]);
                             }}
                             className="bg-white rounded-[6px] overflow-hidden cursor-pointer"
                         >
@@ -132,9 +140,16 @@ export default function Services() {
                         <div
                             key={i}
                             onClick={() => {
-                                if (item.title === "Road") {
-                                    navigate("/road");
-                                }
+                                const routes = {
+                                    "Road": "/road",
+                                    "Sea": "/sea",
+                                    "Air": "/air",
+                                    "Customs Clearance": "/customs",
+                                    "Warehousing & Distribution": "/warehousing",
+                                    "Projects Handling": "/projects",
+                                };
+                            
+                                navigate(routes[item.title]);
                             }}
                             className="group relative bg-[#f3f3f3] rounded-[3px] h-[260px] overflow-hidden cursor-pointer"
                         >

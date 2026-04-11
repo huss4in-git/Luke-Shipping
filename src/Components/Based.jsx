@@ -64,7 +64,7 @@ export default function Based() {
                     </h2>
 
                     <p className="text-black/60 max-w-3xl mx-auto text-[15px] leading-relaxed">
-                        <span style={{ color: '#FD9708' }}>Luke Shipping Co.</span> is dedicated to providing exceptional logistics services. <br />
+                        <span style={{ color: '#FD9708' }}>Luke Shipping</span> is dedicated to providing exceptional logistics services. <br />
                         We employ a PDCA (Plan-Do-Check-Act) cycle to continuously improve our processes.
                     </p>
                 </div>

@@ -211,6 +211,8 @@ export default function Road() {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         
         </>
     );

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import About from "../Components/About";
 
-export default function Tic() {
+export default function Customs() {
     const [shopOpen, setShopOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [solidNav, setSolidNav] = useState(false);
@@ -39,7 +39,7 @@ export default function Tic() {
 
                 {/* BACKGROUND */}
                 <img
-                    src="/tic1.jpg"
+                    src="/customs1.png"
                     alt="Road Transport"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -112,18 +112,15 @@ export default function Tic() {
                     <div className="max-w-4xl">
 
                         <p className="text-sm mb-4 opacity-80">
-                            Home / Services / TIC Services
+                            Home / Services / Customs Clearance
                         </p>
 
                         <h1 className="text-6xl md:text-6xl">
-                            Testing, Inspection & Certifications <br />
-                            with Luke
+                        Customs clearance for <br /> imports, exports
                         </h1>
 
                         <div className="mt-6 max-w-xl text-sm opacity-90">
-                            <span style={{ color: '#FD9708' }}>Luke Shipping Co.</span> ensures products and processes meet quality, safety and regulatory standards.
-                            Through accurate testing and inspections, we help businesses reduce risks and maintain compliance.
-                            We deliver trusted certification that builds confidence and meets global benchmarks.
+                            Overcome borders, optimize processes — with the professional customs service from <span style={{ color: '#FD9708' }}>Luke.</span>  We support you with customs processing, provide you with comprehensive advice and ensure that your goods reach their destination quickly and reliably.
                         </div>
 
                     </div>
@@ -133,16 +130,15 @@ export default function Tic() {
                 <div className="md:hidden absolute bottom-28 left-0 right-0 px-6 text-white">
 
                     <p className="text-[11px] mb-3 opacity-80">
-                        Home / Services / TIC Services
+                        Home / Services / Customs
                     </p>
 
                     <h1 className="text-3xl leading-tight mb-4">
-                    Testing, Inspection & Certifications <br />
-                            with Luke
+                    Customs clearance for imports, exports
                     </h1>
 
                     <p className="text-xs opacity-90">
-                    Ensures products and processes meet quality, safety and regulatory standards.
+                    Overcome borders, optimize processes — with the professional customs service from Luke.
                     </p>
 
                 </div>
@@ -167,7 +163,7 @@ export default function Tic() {
                         {/* CENTER */}
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 bg-[#FD9708] rounded-full"></span>
-                            <span>TIC</span>
+                            <span>Customs</span>
                         </div>
 
                     </div>
@@ -208,7 +204,7 @@ export default function Tic() {
             </div>
 
             <Footer />
-
+        
         </>
     );
 }

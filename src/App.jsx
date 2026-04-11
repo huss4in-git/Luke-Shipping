@@ -12,6 +12,10 @@ import Services from './Components/Services';
 import Road from './Pages/Road';
 import Footer from './Components/Footer';
 import Tic from './Pages/Tic';
+import Sea from './Pages/Sea';
+import Air from './Pages/Air';
+import Customs from './Pages/Customs';
+import Warehousing from './Pages/Warehousing';
 
 
 function Home() {
@@ -55,6 +59,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/road" element={<Road />} />
         <Route path='/tic' element={<Tic />} />
+        <Route path='/sea' element={<Sea />} />
+        <Route path='/air' element={<Air />} />
+        <Route path='/customs' element={<Customs />} />
+        <Route path='/warehousing' element={<Warehousing />} />
       </Routes>
     </Router>
   );
