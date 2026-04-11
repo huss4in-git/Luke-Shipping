@@ -13,6 +13,10 @@ export default function Tic() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        window.lenis?.scrollTo(0, { immediate: true });
+    }, []);
+
+    useEffect(() => {
         let lastScroll = 0;
 
         const handleScroll = () => {

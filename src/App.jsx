@@ -16,6 +16,7 @@ import Sea from './Pages/Sea';
 import Air from './Pages/Air';
 import Customs from './Pages/Customs';
 import Warehousing from './Pages/Warehousing';
+import ScrollToTop from './Components/ScrollToTop';
 
 
 function Home() {
@@ -41,6 +42,8 @@ function App() {
       smoothTouch: true,
     });
 
+    window.lenis = lenis;
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -55,6 +58,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/road" element={<Road />} />

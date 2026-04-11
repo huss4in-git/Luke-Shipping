@@ -8,6 +8,5 @@ createRoot(document.getElementById('root')).render(
     <div className="overflow-x-hidden">
     <App />
     </div>
-    
   </StrictMode>,
 )
