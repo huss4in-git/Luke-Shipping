@@ -3,7 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#f0f0f0] relative overflow-hidden" style={{ fontFamily: "nb-thin" }}>
+        <footer className="bg-[white] relative overflow-hidden" style={{ fontFamily: "nb-thin" }}>
 
             {/* Top content */}
             <div className="relative z-10 max-w-[1400px] mx-auto px-9 md:px-15 pt-14 md:pt-20">

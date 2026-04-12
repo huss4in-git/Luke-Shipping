@@ -135,7 +135,7 @@ export default function Tic() {
                 </div>
 
                 {/* MOBILE HERO TEXT */}
-                <div className="md:hidden absolute bottom-28 left-0 right-0 px-6 text-white">
+                <div className="md:hidden absolute bottom-28 left-0 right-0 px-6 text-white" style={{fontFamily:'nb-thin'}}>
 
                     <p className="text-[11px] mb-3 opacity-80">
                         Home / Services / TIC Services

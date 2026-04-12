@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
+import Roadinfo from "../Components/Roadinfo";
+import Roadfeatures from "../Components/Roadfeatures";
+import Roadadd from "../Components/Roadadd";
+import Banner from "../Components/Banner";
 
 export default function Road() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -134,7 +138,7 @@ export default function Road() {
                 </div>
 
                 {/* MOBILE HERO TEXT */}
-                <div className="md:hidden absolute bottom-28 left-0 right-0 px-6 text-white">
+                <div className="md:hidden absolute bottom-28 left-0 right-0 px-6 text-white" style={{fontFamily:'nb-thin'}}>
 
                     <p className="text-[11px] mb-3 opacity-80">
                         Home / Services / Road
@@ -213,6 +217,10 @@ export default function Road() {
                 </div>
             </div>
 
+            <Roadinfo />
+            <Roadfeatures />
+            <Roadadd />
+            <Banner />
             <Footer />
         
         </>

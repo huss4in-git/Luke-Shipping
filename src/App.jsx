@@ -17,6 +17,7 @@ import Air from './Pages/Air';
 import Customs from './Pages/Customs';
 import Warehousing from './Pages/Warehousing';
 import ScrollToTop from './Components/ScrollToTop';
+import Banner from './Components/Banner';
 
 
 function Home() {
@@ -28,6 +29,7 @@ function Home() {
       <Marquee />
       <Based />
       <Services />
+      <Banner />
       <Footer />
     </div>
   );
