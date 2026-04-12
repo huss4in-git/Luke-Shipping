@@ -132,7 +132,7 @@ export default function Navbar() {
                     navigate("/about");
                   }, 700);
                 }}
-                className="cursor-pointer"
+                className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]"
               >
                 Services
               </span>
@@ -145,7 +145,7 @@ export default function Navbar() {
                     navigate("/about");
                   }, 700);
                 }}
-                className="cursor-pointer"
+                className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]"
               >
                 About Us
               </span>
@@ -159,7 +159,7 @@ export default function Navbar() {
                     navigate("/contact");
                   }, 500);
                 }}
-                className="cursor-pointer"
+                className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]"
               >
                 Careers
               </span>
@@ -172,11 +172,11 @@ export default function Navbar() {
                     navigate("/about");
                   }, 700);
                 }}
-                className="cursor-pointer"
+                className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]"
               >
                 Our Team
               </span>
-              <span>Contact Us</span>
+              <span className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">Contact Us</span>
             </div>
 
           </div>

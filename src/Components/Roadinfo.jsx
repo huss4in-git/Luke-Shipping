@@ -17,7 +17,7 @@ const features = [
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 mb-10 lg:mt-15 lg:mb-15">
   
           {/* Left */}
-          <div className="flex flex-col justify-between px-6 lg:px-10 mb-8 lg:mb-0">
+          <div className="flex flex-col justify-between md:mt-0 mt-5 px-6 lg:px-10 mb-8 lg:mb-0">
             <h2
               className="text-3xl lg:text-4xl tracking-tight text-gray-950"
               style={{ fontFamily: "nb-thin" }}

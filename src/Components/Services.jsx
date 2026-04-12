@@ -33,7 +33,7 @@ export default function Services() {
 
 
                 {/* ---------------- MOBILE ---------------- */}
-                <div className="md:hidden space-y-8">
+                <div className="md:hidden space-y-3">
 
                     {/* TIC CARD (MOBILE ONLY) */}
                     <div
@@ -41,7 +41,7 @@ export default function Services() {
                         className="bg-white rounded-[6px] overflow-hidden cursor-pointer"
                     >
                         {/* IMAGE */}
-                        <div className="bg-[#f3f3f3] flex items-center justify-center h-[150px]">
+                        <div className="bg-[#f3f3f3] mb-3 flex items-center justify-center h-[175px]">
                             <img
                                 src="/tic1.png"
                                 alt="TIC Services"
@@ -85,7 +85,7 @@ export default function Services() {
                         >
 
                             {/* IMAGE */}
-                            <div className="bg-[#f3f3f3] flex items-center justify-center h-[150px]">
+                            <div className="bg-[#f3f3f3] mb-3 flex items-center justify-center h-[175px]">
                                 <img
                                     src={item.image}
                                     alt={item.title}

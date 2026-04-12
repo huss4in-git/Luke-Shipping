@@ -31,7 +31,7 @@ const services = [
 
 export default function Roadadd() {
   return (
-    <section className="bg-white w-full px-6 lg:px-10 md:mt-15 mb-10 md:mb-25 py-16">
+    <section className="bg-white w-full px-6 lg:px-10 md:mt-15 mb-10 md:mb-35 py-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
 
         {/* Left */}

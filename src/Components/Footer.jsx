@@ -46,7 +46,7 @@ const Footer = () => {
                             <div className="flex gap-4 mt-4 md:mt-5 mb-6 md:mb-7">
                                 <a
                                     href="#"
-                                    className="flex items-center gap-2 border border-[#FD9708] rounded-full px-4 md:px-5 py-2 text-[11px] md:text-[12px] tracking-widest uppercase text-gray-900 hover:bg-[#FD9708] hover:text-white transition-colors duration-200"
+                                    className="flex items-center gap-2 bg-[#FD9708] rounded-full px-4 md:px-5 py-3 text-[11px] md:text-[12px] tracking-widest uppercase text-white hover:bg-[#FD9708] transition-colors duration-200"
                                 >
                                     Track Shipment
                                 </a>

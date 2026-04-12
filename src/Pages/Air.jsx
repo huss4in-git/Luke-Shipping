@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
+import Airinfo from "../Components/Airinfo";
+import Banner from "../Components/Banner";
+import Airfeatures from "../Components/Airfeatures";
+import Airadd from "../Components/Airadd";
 
 export default function Air() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -90,16 +94,16 @@ export default function Air() {
 
                         {/* DESKTOP MENU */}
                         <div className="hidden md:flex space-x-8 uppercase">
-                            <span onClick={() => navigate("/about")} className="cursor-pointer">
+                            <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 Services
                             </span>
-                            <span onClick={() => navigate("/about")} className="cursor-pointer">
+                            <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 About Us
                             </span>
-                            <span onClick={() => navigate("/contact")} className="cursor-pointer">
+                            <span onClick={() => navigate("/contact")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 Careers
                             </span>
-                            <span onClick={() => navigate("/about")} className="cursor-pointer">
+                            <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 Our Team
                             </span>
                             <span>Contact Us</span>
@@ -205,8 +209,12 @@ export default function Air() {
                 </div>
             </div>
 
+            <Airinfo />
+            <Airfeatures />
+            <Airadd />
+            <Banner />
             <Footer />
-        
+            
         </>
     );
 }

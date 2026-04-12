@@ -94,16 +94,16 @@ export default function Road() {
 
                         {/* DESKTOP MENU */}
                         <div className="hidden md:flex space-x-8 uppercase">
-                            <span onClick={() => navigate("/about")} className="cursor-pointer">
+                            <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 Services
                             </span>
-                            <span onClick={() => navigate("/about")} className="cursor-pointer">
+                            <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 About Us
                             </span>
-                            <span onClick={() => navigate("/contact")} className="cursor-pointer">
+                            <span onClick={() => navigate("/contact")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 Careers
                             </span>
-                            <span onClick={() => navigate("/about")} className="cursor-pointer">
+                            <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 Our Team
                             </span>
                             <span>Contact Us</span>
