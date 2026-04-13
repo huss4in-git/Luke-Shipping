@@ -112,7 +112,8 @@ const Footer = () => {
 
                     {/* CR */}
                     <div className="text-[11px] md:text-[12px] text-gray-500">
-                        <p>CR :- 7003690828 | VAT :- 300118595400003</p>
+                        <p>CR :- 0000000000 | VAT :- 000000000000000                    
+                        </p>
                     </div>
 
                 </div>
