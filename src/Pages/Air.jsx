@@ -6,6 +6,7 @@ import Airinfo from "../Components/Airinfo";
 import Banner from "../Components/Banner";
 import Airfeatures from "../Components/Airfeatures";
 import Airadd from "../Components/Airadd";
+import Airfaq from "../Components/Airfaq";
 
 export default function Air() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -212,6 +213,7 @@ export default function Air() {
             <Airinfo />
             <Airfeatures />
             <Airadd />
+            <Airfaq />
             <Banner />
             <Footer />
             

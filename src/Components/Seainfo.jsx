@@ -1,17 +1,16 @@
 const features = [
-    "Express and special transport with scheduled delivery options",
-    "Individual solutions for oversized & heavy goods",
-    "Safe transportation of hazardous substances",
-    "Individual advice from local experts in the local language",
-    "Use of the latest technologies and safety standards",
-    "Multimodal transport: combination of road, air and sea",
-    "Flexible delivery options such as truck-mounted forklift solutions",
-    "Scheduled general cargo transport with standard delivery times of 24 to 48 hours",
-    "Partial and full loads (LTL/FTL) for individual requirements",
-    "National and international package handling in general cargo",
+    "Partnership-based cooperation with leading shipping companies",
+    "Weighing of shipments/containers",
+    "Supply chain management with storage, distribution and value-added services",
+    "Customs processing including import, export and fiscal customs",
+    "Container stowing, unloading and securing",
+    "Dangerous goods and project shipments for demanding requirements",
+    "Door-to-door service — from sender location to recipient",
+    "Crosstrades, e.g. from Asia to the USA",
+    "FCL and LCL transports from and to all overseas ports"
   ];
   
-  export default function LukeShippingFeatures() {
+  export default function Seainfo() {
     return (
       <section className="bg-white w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 mb-10 lg:mt-15 lg:mb-15">
@@ -22,11 +21,11 @@ const features = [
               className="text-3xl lg:text-4xl tracking-tight text-gray-950"
               style={{ fontFamily: "nb-thin" }}
             >
-              Trusted expertise in road <br /> transport and logistics
+              Our services at sea and <br /> beyond
             </h2>
             <div className="w-full lg:w-[75%] h-64 lg:h-100 rounded-[6px] overflow-hidden mt-6 lg:mt-auto">
               <img
-                src="/road1.jpg"
+                src="/ship1.jpg"
                 alt="Luke Shipping fleet"
                 className="w-full h-full object-cover"
               />

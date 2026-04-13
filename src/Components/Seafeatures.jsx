@@ -1,29 +1,41 @@
-import { Bus, Layers, MapPin, ArrowLeftRight, Zap } from "lucide-react";
+import { Cpu, PackageCheck, Layers, ShieldCheck, Container, Clock } from "lucide-react";
+
+const iconStyle = { color: "#fda408", width: 28, height: 28 };
 
 const features = [
   {
-    icon: <Layers className="w-7 h-7 text-[#fda408]" />,
-    title: "Always up to date",
-    description: "State-of-the-art assistance systems for maximum safety",
+    icon: <Cpu style={iconStyle} />,
+    title: "Technology",
+    description: "Use of modern technologies for maximum efficiency and transparency",
   },
   {
-    icon: <MapPin className="w-7 h-7 text-[#fda408]" />,
-    title: "Sites",
-    description: "Strategically distributed locations for fast deliveries",
+    icon: <PackageCheck style={iconStyle} />,
+    title: "POD",
+    description: "Proof of Delivery (POD) and optional transportation insurance",
   },
   {
-    icon: <ArrowLeftRight className="w-7 h-7 text-[#fda408]" />,
-    title: "Scheduled services",
-    description: "Scheduled services with high reliability",
+    icon: <Layers style={iconStyle} />,
+    title: "Shipment summary",
+    description: "Summaries of small shipments to save freight",
   },
   {
-    icon: <Zap className="w-7 h-7 text-[#fda408]" />,
-    title: "Premium services",
-    description: "Express and fixed-date deliveries",
+    icon: <ShieldCheck style={iconStyle} />,
+    title: "Certifications",
+    description: "Certifications such as AEO F and RegB for the highest safety standards",
+  },
+  {
+    icon: <Container style={iconStyle} />,
+    title: "Project transportation",
+    description: "All types of project transport — from large machines to sensitive goods",
+  },
+  {
+    icon: <Clock style={iconStyle} />,
+    title: "Dispatch times",
+    description: "Short shipping times and competitive conditions",
   },
 ];
 
-export default function Roadfeatures() {
+export default function Seafeatures() {
   return (
     <section className="bg-white w-full px-6 lg:px-10 py-16">
       <h2

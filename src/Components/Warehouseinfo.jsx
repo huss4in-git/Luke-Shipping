@@ -1,17 +1,17 @@
 const features = [
-    "Express and special transport with scheduled delivery options",
-    "Individual solutions for oversized & heavy goods",
-    "Safe transportation of hazardous substances",
-    "Individual advice from local experts in the local language",
-    "Use of the latest technologies and safety standards",
-    "Multimodal transport: combination of road, air and sea",
-    "Flexible delivery options such as truck-mounted forklift solutions",
-    "Scheduled general cargo transport with standard delivery times of 24 to 48 hours",
-    "Partial and full loads (LTL/FTL) for individual requirements",
-    "National and international package handling in general cargo",
+    "Strategically located warehouses for secure storage and inventory management",
+    "Advanced warehouse management systems for efficient operations and accurate stock tracking",
+    "Comprehensive order fulfillment services for domestic and international markets",
+    "Flexible storage options including both long-term and short-term solutions",
+    "Value-added services including optimized picking, packing and order processing",
+    "Scalable and tailored warehousing solutions to meet your specific business needs",
+    "Timely distribution network connecting your goods to global markets",
+    "Dedicated team ensuring safe handling and protection of your goods",
+    "Cost-minimizing storage strategies without compromising on quality",
+    "End-to-end supply chain optimization from inbound receiving to final delivery",
   ];
   
-  export default function LukeShippingFeatures() {
+  export default function Warehouseinfo() {
     return (
       <section className="bg-white w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 mb-10 lg:mt-15 lg:mb-15">
@@ -22,11 +22,11 @@ const features = [
               className="text-3xl lg:text-4xl tracking-tight text-gray-950"
               style={{ fontFamily: "nb-thin" }}
             >
-              Trusted expertise in road <br /> transport and logistics
+              Whether urgent or <br /> valuable — with us, you <br /> can safely take off.
             </h2>
             <div className="w-full lg:w-[75%] h-64 lg:h-100 rounded-[6px] overflow-hidden mt-6 lg:mt-auto">
               <img
-                src="/road1.jpg"
+                src="/cargo.webp"
                 alt="Luke Shipping fleet"
                 className="w-full h-full object-cover"
               />

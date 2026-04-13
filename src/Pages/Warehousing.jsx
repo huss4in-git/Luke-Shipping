@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
+import Warehouseinfo from "../Components/Warehouseinfo";
+import Wfaq from "../Components/Wfaq";
 
 export default function Warehousing() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -203,6 +205,8 @@ export default function Warehousing() {
                 </div>
             </div>
 
+            <Warehouseinfo />
+            <Wfaq />
             <Footer />
         
         </>

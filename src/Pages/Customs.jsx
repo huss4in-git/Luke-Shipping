@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
+import Customsinfo from "../Components/Customsinfo";
+import Banner from "../Components/Banner";
+import Customsfeatures from "../Components/Customsfeatures";
+import Customsfaq from "../Components/Customsfaq";
+
 
 export default function Customs() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -204,6 +209,10 @@ export default function Customs() {
                 </div>
             </div>
 
+            <Customsinfo />
+            <Customsfeatures />
+            <Customsfaq />
+            <Banner />
             <Footer />
         
         </>

@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
+import Seainfo from "../Components/Seainfo";
+import Seafeatures from "../Components/Seafeatures";
+import Banner from "../Components/Banner";
+import Seaadd from "../Components/Seaadd";
+import Seafaq from "../Components/Seafaq";
 
 export default function Sea() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -206,6 +211,11 @@ export default function Sea() {
                 </div>
             </div>
 
+            <Seainfo />
+            <Seafeatures />
+            <Seaadd />
+            <Seafaq />
+            <Banner />
             <Footer />
         
         </>

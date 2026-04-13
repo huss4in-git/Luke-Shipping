@@ -1,17 +1,15 @@
 const features = [
-    "Express and special transport with scheduled delivery options",
-    "Individual solutions for oversized & heavy goods",
-    "Safe transportation of hazardous substances",
-    "Individual advice from local experts in the local language",
-    "Use of the latest technologies and safety standards",
-    "Multimodal transport: combination of road, air and sea",
-    "Flexible delivery options such as truck-mounted forklift solutions",
-    "Scheduled general cargo transport with standard delivery times of 24 to 48 hours",
-    "Partial and full loads (LTL/FTL) for individual requirements",
-    "National and international package handling in general cargo",
+    "More safety and punctuality through process optimization",
+    "Customs processing, consulting and customs management across national borders and continents",
+    "Customs and compliance advice: Minimizing risks through in-depth expertise",
+    "Own customs warehouses: Efficient warehouse logistics for greater flexibility",
+    "Import & export: professional customs clearance for all flows of goods",
+    "Automated customs processing to speed up your processes",
+    "Seamless customs clearance, regardless of the nature of your shipment",
+    "Optimize your supply chain and ensure fast, secure customs processes"
   ];
   
-  export default function LukeShippingFeatures() {
+  export default function Customsinfo() {
     return (
       <section className="bg-white w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 mb-10 lg:mt-15 lg:mb-15">
@@ -22,11 +20,11 @@ const features = [
               className="text-3xl lg:text-4xl tracking-tight text-gray-950"
               style={{ fontFamily: "nb-thin" }}
             >
-              Trusted expertise in road <br /> transport and logistics
+              Smart solutions and  <br /> customized customs <br /> services
             </h2>
             <div className="w-full lg:w-[75%] h-64 lg:h-100 rounded-[6px] overflow-hidden mt-6 lg:mt-auto">
               <img
-                src="/road1.jpg"
+                src="/cargo.jpg"
                 alt="Luke Shipping fleet"
                 className="w-full h-full object-cover"
               />
