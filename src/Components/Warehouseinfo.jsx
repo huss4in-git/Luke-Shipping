@@ -14,7 +14,7 @@ const features = [
   export default function Warehouseinfo() {
     return (
       <section className="bg-white w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 mb-10 lg:mt-15 lg:mb-15">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 mb-10 lg:mt-15 lg:mb-35">
   
           {/* Left */}
           <div className="flex flex-col justify-between md:mt-0 mt-5 px-6 lg:px-10 mb-8 lg:mb-0">
@@ -22,11 +22,11 @@ const features = [
               className="text-3xl lg:text-4xl tracking-tight text-gray-950"
               style={{ fontFamily: "nb-thin" }}
             >
-              Whether urgent or <br /> valuable — with us, you <br /> can safely take off.
+              We not only perfect the <br /> movement, but also the <br /> storage of goods.
             </h2>
             <div className="w-full lg:w-[75%] h-64 lg:h-100 rounded-[6px] overflow-hidden mt-6 lg:mt-auto">
               <img
-                src="/cargo.webp"
+                src="/warehouse.jpg"
                 alt="Luke Shipping fleet"
                 className="w-full h-full object-cover"
               />

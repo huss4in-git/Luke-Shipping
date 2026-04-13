@@ -10,20 +10,32 @@ const faqs = [
         ],
       },
   {
-    question: "How does air freight work?",
-    answer: "An air freight forwarder books the freight space with the airline and organizes the entire shipping chain, including customs processing and onward transportation.",
+    question: "What types of logistics are there?",
+    answer: "Logistics covers the entire supply chain, from the procurement of raw materials to disposal. The steps include procurement logistics, production logistics, distribution logistics and disposal logistics.",
   },
   {
-    question: "What does air freight cost?",
-    answer: "Air freight is the most expensive delivery method, but it is also the fastest. The costs depend on weight, dimensions and destination.",
+    question: "What is commissioning?",
+    answer: [
+        "Commissioning is the process in which goods from the warehouse are specifically assembled to meet customer orders or production requirements. In logistics, it is a central part of warehouse and shipping processes, as it decisively determines efficiency, delivery speed and accuracy.",
+        "At Luke, picking includes all steps from the removal of the items to inspection to packaging and preparation for shipping. Depending on the requirements, we use various processes — from manual picking to automated, IT-based systems. With modern warehouse technology, digital scanner solutions and precise process control, we guarantee short turnaround times and error-free processes.",
+        "Optimized picking not only ensures satisfied customers, but also lower costs and sustainable use of resources. In combination with our transport and warehouse logistics services, it creates the basis for a smooth supply chain."
+      ],
   },
   {
-    question: "What is transported by air freight?",
-    answer: "Air freight is primarily used to transport time-sensitive, high-value, or fragile goods. These include spare parts, machine components, electronics, medicines, fashion items, and perishable goods such as food or flowers. Documents, express shipments, and urgent e-commerce orders are also frequently sent by air freight—anywhere where speed and reliability are crucial.",
+    question: "What is supply chain management?",
+    answer: [
+        "Supply chain management (SCM) describes the holistic planning, control and optimization of all processes along the supply chain — from procurement to production to distribution to end customers. The aim of supply chain management is to make goods and information flows efficient, reduce costs and shorten delivery times.",
+        "Supply chain management plays a central role in logistics because it connects all involved partners — manufacturers, suppliers, freight forwarders and retailers. Through digital systems, transparent communication and precise process control, inventories can be optimally coordinated and bottlenecks avoided.",
+        "Luke helps companies to make their supply chains efficient, flexible and sustainable. With modern IT solutions, a Europe-wide network and practical experience, we create transparency and stability in complex supply chains. Supply chain management is thus becoming a decisive success factor for smooth and sustainable logistics."
+      ],
   },
   {
-    question: "How does air freight have to be packaged?",
-    answer: "The packaging must protect the goods during transport. Boxes or pallets are often used. Wood packaging must be treated in accordance with ISPM15 to prevent pests.",
+    question: "What is sustainable logistics?",
+    answer: [
+        "Sustainable logistics means designing transport and storage processes in such a way that they are ecologically, economically and socially responsible. The aim is to reduce emissions, use resources efficiently and at the same time ensure reliable supply chains.",
+        "At Luke, we combine efficiency with environmental awareness. Through CO₂-optimized transportation, modern vehicle fleets, energy-efficient warehouse technology and digital process control, we actively contribute to reducing our ecological footprint.",
+        "However, sustainable logistics involves more than just environmentally friendly transport — it stands for a long-term, future-oriented way of thinking that combines efficiency, innovation and responsibility. In this way, we create logistics solutions that benefit both our customers and the environment."
+      ],
   },
 ];
 
