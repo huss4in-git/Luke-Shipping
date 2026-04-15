@@ -3,19 +3,19 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const features = [
-  "Exclusive partnerships with reliable cargo airlines and fixed freight spaces",
-  "Weekly transportation of cars & luxury goods",
-  "Warehousing and distribution at important global locations",
-  "Tracking & tracing for maximum transparency of your shipments",
-  "Customs processing including import, export and fiscal customs",
-  "Express and on-board courier services for the highest urgency",
-  "Specialization in special transports such as exclusive vehicles or dangerous goods",
-  "Complete air freight service, from pickup to delivery",
-  "Multimodal solutions for efficiency and cost benefits",
-  "Worldwide imports and exports with personal contacts from A to Z",
+  "End-to-end project planning and execution for complex logistics operations",
+  "Specialized handling of heavy-lift and out-of-gauge cargo with precision",
+  "Dedicated project management team ensuring seamless coordination at every stage",
+  "Customized logistics solutions tailored to unique project requirements",
+  "Expertise across industries including construction, energy, oil & gas, and manufacturing",
+  "Efficient transportation planning with reliable carrier partnerships",
+  "Streamlined customs clearance and regulatory compliance support",
+  "On-site coordination and delivery for smooth project completion",
+  "Advanced risk management ensuring safety and minimal disruptions",
+  "Cost-effective project execution without compromising quality or timelines",
 ];
 
-export default function Airinfo() {
+export default function Projectsinfo() {
   const sectionRef = useRef(null);
   const itemsRef = useRef([]);
 
@@ -53,7 +53,7 @@ export default function Airinfo() {
             className="text-3xl lg:text-4xl tracking-tight text-gray-950"
             style={{ fontFamily: "nb-thin" }}
           >
-            Whether urgent or <br /> valuable — with us, you <br /> can safely take off.
+            Bringing clarity and <br /> precision to complex <br /> project execution.
           </h2>
 
           <div
@@ -61,7 +61,7 @@ export default function Airinfo() {
             className="w-full lg:w-[75%] h-64 lg:h-100 rounded-[6px] overflow-hidden mt-6 lg:mt-auto"
           >
             <img
-              src="/cargo.webp"
+              src="/project1.jpg"
               alt="Luke Shipping fleet"
               className="w-full h-full object-cover"
             />

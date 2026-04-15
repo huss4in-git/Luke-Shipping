@@ -14,6 +14,8 @@ export default function Road() {
     const [navVisible, setNavVisible] = useState(true);
     const [activeMenu, setActiveMenu] = useState("main");
 
+    const [servicesOpen, setServicesOpen] = useState(false);
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -94,9 +96,55 @@ export default function Road() {
 
                         {/* DESKTOP MENU */}
                         <div className="hidden md:flex space-x-8 uppercase">
-                            <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
-                                Services
-                            </span>
+                            <div
+                                className="relative"
+                                onMouseEnter={() => setServicesOpen(true)}
+                                onMouseLeave={() => setServicesOpen(false)}
+                            >
+                                <span className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
+                                    Services
+                                </span>
+
+                                {/* DROPDOWN */}
+                                <div
+                                    className={`absolute top-full left-0 transition-all duration-200 ease-in-out ${servicesOpen
+                                            ? "opacity-100 pointer-events-auto translate-y-0"
+                                            : "opacity-0 pointer-events-none -translate-y-2"
+                                        }`}
+                                    style={{ paddingTop: "12px" }}
+                                >
+                                    <div
+                                        style={{
+                                            minWidth: "180px",
+                                            background: "white",
+                                            boxShadow: "0 8px 32px rgba(0,0,0,0.10)",
+                                            borderRadius: "3px",
+                                            padding: "8px 0",
+                                        }}
+                                    >
+                                        {[
+                                            { label: "Road", path: "/road" },
+                                            { label: "Air", path: "/air" },
+                                            { label: "Sea", path: "/sea" },
+                                            { label: "Customs", path: "/customs" },
+                                            { label: "Warehousing", path: "/warehousing" },
+                                            { label: "Projects handling", path: "/projects" },
+                                        ].map((item) => (
+                                            <div
+                                                key={item.label}
+                                                onClick={() => {
+                                                    setServicesOpen(false);
+                                                    setTimeout(() => navigate(item.path), 150);
+                                                }}
+                                                className="px-3 py-[5px] text-[12px] text-black cursor-pointer hover:text-[#FD9708] transition-colors duration-150"
+                                                style={{ fontFamily: "nb-thin", letterSpacing: "0.01em" }}
+                                            >
+                                                {item.label}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
                             <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 About Us
                             </span>
@@ -106,7 +154,9 @@ export default function Road() {
                             <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 Our Team
                             </span>
-                            <span>Contact Us</span>
+                            <span onClick={() => navigate("/")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
+                                Contact Us
+                            </span>
                         </div>
 
                     </div>
@@ -138,7 +188,7 @@ export default function Road() {
                 </div>
 
                 {/* MOBILE HERO TEXT */}
-                <div className="md:hidden absolute bottom-28 left-0 right-0 px-6 text-white" style={{fontFamily:'nb-thin'}}>
+                <div className="md:hidden absolute bottom-28 left-0 right-0 px-6 text-white" style={{ fontFamily: 'nb-thin' }}>
 
                     <p className="text-[11px] mb-3 opacity-80">
                         Home / Services / Road
@@ -222,7 +272,7 @@ export default function Road() {
             <Roadadd />
             <Banner />
             <Footer />
-        
+
         </>
     );
 }

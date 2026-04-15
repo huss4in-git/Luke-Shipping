@@ -18,6 +18,7 @@ import Customs from './Pages/Customs';
 import Warehousing from './Pages/Warehousing';
 import ScrollToTop from './Components/ScrollToTop';
 import Banner from './Components/Banner';
+import Projects from './Pages/Projects';
 
 
 function Home() {
@@ -69,6 +70,7 @@ function App() {
         <Route path='/air' element={<Air />} />
         <Route path='/customs' element={<Customs />} />
         <Route path='/warehousing' element={<Warehousing />} />
+        <Route path='/projects' element={<Projects />} />
       </Routes>
     </Router>
   );

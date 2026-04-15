@@ -1,44 +1,32 @@
 import { useEffect, useRef } from "react";
-import { Cpu, PackageCheck, Layers, ShieldCheck, Container, Clock, Earth, PersonStanding, LogOut, Computer } from "lucide-react";
+import { DraftingCompass, Truck, ShieldCheck, Settings } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const iconStyle = { color: "#fda408", width: 28, height: 28 };
-
 const features = [
   {
-    icon: <Earth style={iconStyle} />,
-    title: "Site logistics",
-    description: "Dynamic, networked locations enable international projects.",
+    icon: <DraftingCompass className="w-7 h-7 text-[#fda408]" />,
+    title: "Project planning",
+    description: "Detailed planning and coordination for complex logistics operations",
   },
   {
-    icon: <PersonStanding style={iconStyle} />,
-    title: "Safety standards",
-    description: "TAPA compliant solutions with temperature control and video monitoring.",
+    icon: <Truck className="w-7 h-7 text-[#fda408]" />,
+    title: "Specialized transport",
+    description: "Safe handling of heavy-lift and out-of-gauge cargo with precision",
   },
   {
-    icon: <LogOut style={iconStyle} />,
-    title: "Outsourcing solutions",
-    description: "Tailored concepts for upstream and downstream production processes.",
+    icon: <Settings className="w-7 h-7 text-[#fda408]" />,
+    title: "End-to-end execution",
+    description: "Seamless management from initial concept to final delivery",
   },
   {
-    icon: <Layers style={iconStyle} />,
-    title: "Value Added Services",
-    description: "Increased performance through innovative logistics solutions.",
-  },
-  {
-    icon: <Container style={iconStyle} />,
-    title: "Sustainable logistics",
-    description: "Low-emission technologies, rail transport and green logistics.",
-  },
-  {
-    icon: <Computer style={iconStyle} />,
-    title: "Technological expertise",
-    description: "In-house software development and hardware solutions to increase efficiency.",
+    icon: <ShieldCheck className="w-7 h-7 text-[#fda408]" />,
+    title: "Risk & compliance",
+    description: "Strict safety standards and regulatory compliance at every stage",
   },
 ];
 
-export default function Customsfeatures() {
+export default function Projectfeatures() {
   const sectionRef = useRef(null);
   const itemsRef = useRef([]);
 
@@ -65,7 +53,7 @@ export default function Customsfeatures() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white w-full pb-30 px-6 lg:px-10 py-16">
+    <section ref={sectionRef} className="bg-white w-full px-6 lg:px-10 py-16 mb-15">
       
       {/* Heading */}
       <h2
@@ -73,7 +61,7 @@ export default function Customsfeatures() {
         className="md:text-4xl text-3xl tracking-tight text-gray-950 mb-10 md:mb-25"
         style={{ fontFamily: "nb-thin" }}
       >
-        Special services
+        Convincing features
       </h2>
 
       {/* Features */}

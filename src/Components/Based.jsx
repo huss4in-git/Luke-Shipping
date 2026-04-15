@@ -20,7 +20,7 @@ export default function Based() {
     }, []);
 
     useEffect(() => {
-        if (!isDesktop) return; // ❌ skip GSAP on mobile
+        if (!isDesktop) return;
 
         gsap.registerPlugin(ScrollTrigger);
 
@@ -119,7 +119,7 @@ export default function Based() {
                 {/* CTA */}
                 <div className="text-center">
                     <button
-                        onClick={() => window.open("https://wa.me/918330061967", "_blank")}
+                        onClick={() => window.open("https://wa.me/966582780836", "_blank")}
                         className="bg-[#FD9708] text-black px-8 py-3 rounded-full cursor-pointer text-sm font-medium hover:bg-black hover:text-white transition"
                     >
                         BOOK SHIPMENT

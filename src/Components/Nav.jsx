@@ -9,6 +9,8 @@ export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState("main");
   const [hoveredNav, setHoveredNav] = useState(null);
 
+  const [servicesOpen, setServicesOpen] = useState(false);
+
   const shopItems = [
     "Available Coffees",
     "Seasonal Lots",
@@ -123,19 +125,56 @@ export default function Navbar() {
 
             {/* DESKTOP RIGHT (UNCHANGED) */}
             <div className="hidden md:flex space-x-8 uppercase">
-              <span
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setShopOpen(false);
+            <div
+  className="relative"
+  onMouseEnter={() => setServicesOpen(true)}
+  onMouseLeave={() => setServicesOpen(false)}
+>
+  <span className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
+    Services
+  </span>
 
-                  setTimeout(() => {
-                    navigate("/about");
-                  }, 700);
-                }}
-                className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]"
-              >
-                Services
-              </span>
+  {/* DROPDOWN */}
+  <div
+    className={`absolute top-full left-0 transition-all duration-200 ease-in-out ${
+      servicesOpen
+        ? "opacity-100 pointer-events-auto translate-y-0"
+        : "opacity-0 pointer-events-none -translate-y-2"
+    }`}
+    style={{ paddingTop: "12px" }}
+  >
+    <div
+      style={{
+        minWidth: "180px",
+        background: "white",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.10)",
+        borderRadius: "3px",
+        padding: "8px 0",
+      }}
+    >
+      {[
+        { label: "Road", path: "/road" },
+        { label: "Air", path: "/air" },
+        { label: "Sea", path: "/sea" },
+        { label: "Customs", path: "/customs" },
+        { label: "Warehousing", path: "/warehousing" },
+        { label: "Projects handling", path: "/projects" },
+      ].map((item) => (
+        <div
+          key={item.label}
+          onClick={() => {
+            setServicesOpen(false);
+            setTimeout(() => navigate(item.path), 150);
+          }}
+          className="px-3 py-[5px] text-[12px] text-black cursor-pointer hover:text-[#FD9708] transition-colors duration-150"
+          style={{ fontFamily: "nb-thin", letterSpacing: "0.01em" }}
+        >
+          {item.label}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
               <span
                 onClick={() => {
                   setMobileMenuOpen(false);
@@ -258,7 +297,7 @@ export default function Navbar() {
                   <span>Services</span>
                   <span>→</span>
                 </div>
-                
+
                 <div className="flex justify-between">
                   <span>Careers</span>
                   <span>→</span>
