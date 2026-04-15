@@ -19,10 +19,7 @@ import Warehousing from './Pages/Warehousing';
 import ScrollToTop from './Components/ScrollToTop';
 import Banner from './Components/Banner';
 import Projects from './Pages/Projects';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   return (
@@ -41,29 +38,24 @@ function Home() {
 
 function App() {
   useEffect(() => {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
     const lenis = new Lenis({
       duration: 1.5,
       easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
-      smoothTouch: !isMobile, // Disable smooth touch on mobile to avoid conflict
+      smoothTouch: true,
     });
 
     window.lenis = lenis;
 
-    // ✅ Sync Lenis with GSAP ScrollTrigger
-    lenis.on('scroll', ScrollTrigger.update);
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0);
+    requestAnimationFrame(raf);
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove((time) => lenis.raf(time * 1000));
     };
   }, []);
 
@@ -84,4 +76,5 @@ function App() {
   );
 }
 
-export default App;
+
+export default App
