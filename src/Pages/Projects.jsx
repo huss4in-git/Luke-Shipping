@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
@@ -9,18 +9,17 @@ import Projectfaq from "../Components/Projectfaq";
 import Projectfeatures from "../Components/Projectfeatures";
 import Banner from "../Components/Banner";
 
-export default function Projects() {
+export default function Road() {
     const [shopOpen, setShopOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [solidNav, setSolidNav] = useState(false);
     const [navVisible, setNavVisible] = useState(true);
     const [activeMenu, setActiveMenu] = useState("main");
+    const [servicesOpen, setServicesOpen] = useState(false);
 
-    
+    const heroImgRef = useRef(null); // 👈 add this
 
     const navigate = useNavigate();
-
-    const [servicesOpen, setServicesOpen] = useState(false);
 
     useEffect(() => {
         let lastScroll = 0;
@@ -36,10 +35,15 @@ export default function Projects() {
                 setNavVisible(true);
             }
 
+            // 👇 Parallax: image moves up at half scroll speed
+            if (heroImgRef.current) {
+                heroImgRef.current.style.transform = `translateY(${currentScroll * 0.2}px)`;
+            }
+
             lastScroll = currentScroll;
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
@@ -48,12 +52,15 @@ export default function Projects() {
             {/* HERO SECTION */}
             <section className="h-screen relative overflow-hidden">
 
-                {/* BACKGROUND */}
+                {/* BACKGROUND — add ref and remove transition on transform */}
                 <img
+                    ref={heroImgRef}
                     src="/project.jpg"
-                    alt="Road Transport"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    alt="Projects Handling"
+                    className="absolute inset-0 w-full h-full object-cover origin-top"
+                    style={{ willChange: "transform" }}
                 />
+
 
                 <div className="absolute inset-0 bg-black/30"></div>
 
@@ -127,6 +134,7 @@ export default function Projects() {
                                         }}
                                     >
                                         {[
+                                            { label: "TIC Services", path: "/tic" },
                                             { label: "Road", path: "/road" },
                                             { label: "Air", path: "/air" },
                                             { label: "Sea", path: "/sea" },
@@ -231,35 +239,108 @@ export default function Projects() {
             </section>
 
             {/* MOBILE MENU */}
-            <div
-                className={`fixed top-0 right-0 h-full w-full bg-white z-[1000] transform transition-transform duration-500 ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-                    }`}
+            {/* MOBILE MENU DRAWER */}
+<div
+  className={`fixed top-0 right-0 h-full w-full bg-white z-[1000] transform transition-transform duration-500 ${
+    mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+  }`}
+  style={{ fontFamily: "nb-thin" }}
+>
+  <div className="flex items-center justify-between px-6 h-16 border-b border-black/10">
+
+    <span
+      onClick={() => {
+        if (activeMenu === "services") setActiveMenu("main");
+        else setMobileMenuOpen(false);
+      }}
+      className="text-[12px] cursor-pointer"
+    >
+      {activeMenu === "services" ? "← BACK" : "CLOSE"}
+    </span>
+
+    <span></span>
+
+    <span className="text-[12px]">CONTACT</span>
+  </div>
+
+  <div className="relative overflow-hidden h-full">
+    <div
+      className={`flex w-[200%] transition-transform duration-500 ${
+        activeMenu === "services"
+          ? "-translate-x-1/2"
+          : "translate-x-0"
+      }`}
+    >
+
+      {/* MAIN MENU */}
+      <div className="w-1/2 px-6 pt-12">
+        <div className="space-y-2 text-[24px]">
+
+          <div
+            onClick={() => setActiveMenu("services")}
+            className="flex justify-between cursor-pointer"
+          >
+            <span>Services</span>
+            <span>→</span>
+          </div>
+
+          <div className="flex justify-between">
+            <span>Careers</span>
+            <span>→</span>
+          </div>
+
+          <div className="flex justify-between">
+            <span>Our Team</span>
+            <span>→</span>
+          </div>
+
+          <div
+            onClick={() => {
+              setMobileMenuOpen(false);
+              setActiveMenu("main");
+              setTimeout(() => navigate("/about"), 300);
+            }}
+            className="flex justify-between cursor-pointer"
+          >
+            <span>About us</span>
+            <span>→</span>
+          </div>
+
+        </div>
+      </div>
+
+      {/* SERVICES MENU */}
+      <div className="w-1/2 px-6 pt-12 flex flex-col h-full">
+        <div className="space-y-2 text-[24px]">
+
+          {[
+            { label: "TIC Service", path: "/tic" },
+            { label: "Road Freight", path: "/road" },
+            { label: "Air Freight", path: "/air" },
+            { label: "Sea Freight", path: "/sea" },
+            { label: "Customs Clearance", path: "/customs" },
+            { label: "Warehousing & Distribution", path: "/warehousing" },
+            { label: "Projects Handling", path: "/projects" },
+          ].map((item) => (
+            <p
+              key={item.label}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setActiveMenu("main");
+                setTimeout(() => navigate(item.path), 300);
+              }}
+              className="cursor-pointer"
             >
-                <div className="flex items-center justify-between px-6 h-16 border-b border-black/10">
+              {item.label}
+            </p>
+          ))}
 
-                    <span
-                        onClick={() => {
-                            if (activeMenu === "shop") setActiveMenu("main");
-                            else setMobileMenuOpen(false);
-                        }}
-                        className="text-[12px] cursor-pointer"
-                    >
-                        CLOSE
-                    </span>
+        </div>
+      </div>
 
-                    <span></span>
-                    <span className="text-[12px]">CONTACT</span>
-                </div>
-
-                <div className="px-6 pt-12 space-y-4 text-[24px]">
-                    <div>Services →</div>
-                    <div>Careers →</div>
-                    <div>Our Team →</div>
-                    <div onClick={() => navigate("/about")} className="cursor-pointer">
-                        About us →
-                    </div>
-                </div>
-            </div>
+    </div>
+  </div>
+</div>
 
             <Projectsinfo />
             <Projectfeatures />

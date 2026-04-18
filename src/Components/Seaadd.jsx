@@ -76,7 +76,7 @@ export default function Seaadd() {
             className="md:mb-0 mb-10"
           >
             <button className="flex items-center gap-0 group cursor-pointer">
-              <span className="bg-[#FD9708] text-white text-sm px-5 py-2 rounded-full">
+              <span className="bg-[#FD9708] text-white text-sm px-5 py-2 rounded-full"  style={{fontFamily:'nb-thin'}}>
                 Contact Us
               </span>
             </button>

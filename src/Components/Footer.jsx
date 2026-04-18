@@ -1,5 +1,17 @@
 import { FaFacebookF, FaInstagram, FaTiktok, FaSnapchatGhost, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+
+const links = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/tic" },
+    { name: "Our Team", path: "/team" },
+    { name: "Tracking", path: "/tracking" },
+    { name: "Careers", path: "/career" },
+    { name: "Contact Us", path: "/contact" },
+    { name: "Locations", path: "/locations" },
+];
 
 const Footer = () => {
     return (
@@ -46,24 +58,21 @@ const Footer = () => {
                             <div className="flex gap-4 mt-4 md:mt-5 mb-6 md:mb-7">
                                 <a
                                     href="#"
-                                    className="flex items-center gap-2 bg-[#FD9708] rounded-full px-4 md:px-5 py-3 text-[11px] md:text-[12px] tracking-widest uppercase text-white hover:bg-[#FD9708] transition-colors duration-200"
+                                    className="flex items-center gap-2 bg-[#FD9708] rounded-full px-4 md:px-5 py-3 text-[11px] md:text-[12px] tracking-widest uppercase text-white hover:bg-[#FD9708] transition-colors duration-200" style={{ fontFamily: 'nb-thin' }}
                                 >
                                     Track Shipment
                                 </a>
                             </div>
 
                             <div className="grid grid-cols-3 md:grid-cols-4 gap-y-3">
-                                {[
-                                    "Home", "About Us", "Services", "Our Team",
-                                    "Tracking", "Career", "Contact Us", "Locations",
-                                ].map((item, i) => (
-                                    <a
+                                {links.map((item, i) => (
+                                    <Link
                                         key={i}
-                                        href="#"
-                                        className="text-[13px] text-gray-700 hover:text-gray-900 font-medium whitespace-nowrap"
+                                        to={item.path}
+                                        className="text-[13px] text-gray-700 hover:text-[#FD9708] duration-300 font-medium whitespace-nowrap"
                                     >
-                                        {item}
-                                    </a>
+                                        {item.name}
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -112,7 +121,7 @@ const Footer = () => {
 
                     {/* CR */}
                     <div className="text-[11px] md:text-[12px] text-gray-500">
-                        <p>CR :- 0000000000 | VAT :- 000000000000000                    
+                        <p>CR :- 0000000000 | VAT :- 000000000000000
                         </p>
                     </div>
 

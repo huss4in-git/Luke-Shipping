@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  const [shopOpen, setShopOpen] = useState(false);
+  const [serviceOpen, setServiceOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [solidNav, setSolidNav] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
@@ -11,13 +11,7 @@ export default function Navbar() {
 
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  const shopItems = [
-    "Available Coffees",
-    "Seasonal Lots",
-    "Find Your Coffee",
-    "Wholesale & Sourcing",
-    "Partner With Us",
-  ];
+  const heroImgRef = useRef(null);
 
   useEffect(() => {
     let lastScroll = 0;
@@ -33,6 +27,10 @@ export default function Navbar() {
         setNavVisible(true);
       }
 
+      if (heroImgRef.current) {
+        heroImgRef.current.style.transform = `translateY(${currentScroll * 0.2}px)`;
+    }
+
       lastScroll = currentScroll;
     };
 
@@ -41,10 +39,10 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (!shopOpen) {
+    if (!serviceOpen) {
       setHoveredNav(null);
     }
-  }, [shopOpen]);
+  }, [serviceOpen]);
 
   const dimOthers = (item) => {
     if (!hoveredNav) return false;
@@ -59,9 +57,11 @@ export default function Navbar() {
       <section className="h-screen relative overflow-hidden">
 
         <img
+         ref={heroImgRef}
           src="/shipping.jpg"
           alt="Heavy Industry Transport"
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ willChange: "transform" }}
         />
 
         <div className="absolute inset-0 bg-black/25"></div>
@@ -81,7 +81,7 @@ export default function Navbar() {
             <div
               onClick={() => {
                 setMobileMenuOpen(false);
-                setShopOpen(false);
+                setServiceOpen(false);
 
                 setTimeout(() => {
                   navigate("/");
@@ -100,7 +100,7 @@ export default function Navbar() {
             <div
               onClick={() => {
                 setMobileMenuOpen(false);
-                setShopOpen(false);
+                setServiceOpen(false);
 
                 setTimeout(() => {
                   navigate("/");
@@ -125,60 +125,60 @@ export default function Navbar() {
 
             {/* DESKTOP RIGHT (UNCHANGED) */}
             <div className="hidden md:flex space-x-8 uppercase">
-            <div
-  className="relative"
-  onMouseEnter={() => setServicesOpen(true)}
-  onMouseLeave={() => setServicesOpen(false)}
->
-  <span className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
-    Services
-  </span>
+              <div
+                className="relative"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                <span className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
+                  Services
+                </span>
 
-  {/* DROPDOWN */}
-  <div
-    className={`absolute top-full left-0 transition-all duration-200 ease-in-out ${
-      servicesOpen
-        ? "opacity-100 pointer-events-auto translate-y-0"
-        : "opacity-0 pointer-events-none -translate-y-2"
-    }`}
-    style={{ paddingTop: "12px" }}
-  >
-    <div
-      style={{
-        minWidth: "180px",
-        background: "white",
-        boxShadow: "0 8px 32px rgba(0,0,0,0.10)",
-        borderRadius: "3px",
-        padding: "8px 0",
-      }}
-    >
-      {[
-        { label: "Road", path: "/road" },
-        { label: "Air", path: "/air" },
-        { label: "Sea", path: "/sea" },
-        { label: "Customs", path: "/customs" },
-        { label: "Warehousing", path: "/warehousing" },
-        { label: "Projects handling", path: "/projects" },
-      ].map((item) => (
-        <div
-          key={item.label}
-          onClick={() => {
-            setServicesOpen(false);
-            setTimeout(() => navigate(item.path), 150);
-          }}
-          className="px-3 py-[5px] text-[12px] text-black cursor-pointer hover:text-[#FD9708] transition-colors duration-150"
-          style={{ fontFamily: "nb-thin", letterSpacing: "0.01em" }}
-        >
-          {item.label}
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
+                {/* DROPDOWN */}
+                <div
+                  className={`absolute top-full left-0 transition-all duration-200 ease-in-out ${servicesOpen
+                      ? "opacity-100 pointer-events-auto translate-y-0"
+                      : "opacity-0 pointer-events-none -translate-y-2"
+                    }`}
+                  style={{ paddingTop: "12px" }}
+                >
+                  <div
+                    style={{
+                      minWidth: "180px",
+                      background: "white",
+                      boxShadow: "0 8px 32px rgba(0,0,0,0.10)",
+                      borderRadius: "3px",
+                      padding: "8px 0",
+                    }}
+                  >
+                    {[
+                      { label: "TIC Services", path: "/tic" },
+                      { label: "Road", path: "/road" },
+                      { label: "Air", path: "/air" },
+                      { label: "Sea", path: "/sea" },
+                      { label: "Customs", path: "/customs" },
+                      { label: "Warehousing", path: "/warehousing" },
+                      { label: "Projects handling", path: "/projects" },
+                    ].map((item) => (
+                      <div
+                        key={item.label}
+                        onClick={() => {
+                          setServicesOpen(false);
+                          setTimeout(() => navigate(item.path), 150);
+                        }}
+                        className="px-3 py-[5px] text-[12px] text-black cursor-pointer hover:text-[#FD9708] transition-colors duration-150"
+                        style={{ fontFamily: "nb-thin", letterSpacing: "0.01em" }}
+                      >
+                        {item.label}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
               <span
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  setShopOpen(false);
+                  setServiceOpen(false);
 
                   setTimeout(() => {
                     navigate("/about");
@@ -192,7 +192,7 @@ export default function Navbar() {
               <span
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  setShopOpen(false);
+                  setServiceOpen(false);
 
                   setTimeout(() => {
                     navigate("/contact");
@@ -205,7 +205,7 @@ export default function Navbar() {
               <span
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  setShopOpen(false);
+                  setServiceOpen(false);
 
                   setTimeout(() => {
                     navigate("/about");
@@ -272,12 +272,12 @@ export default function Navbar() {
 
           <span
             onClick={() => {
-              if (activeMenu === "shop") setActiveMenu("main");
+              if (activeMenu === "services") setActiveMenu("main");
               else setMobileMenuOpen(false);
             }}
             className="text-[12px] cursor-pointer"
           >
-            {activeMenu === "shop" ? "← SHOP" : "CLOSE"}
+            {activeMenu === "services" ? "← BACK" : "CLOSE"}
           </span>
 
           {/* REMOVED TEXT */}
@@ -287,16 +287,17 @@ export default function Navbar() {
         </div>
 
         <div className="relative overflow-hidden h-full">
-          <div className={`flex w-[200%] transition-transform duration-500 ${activeMenu === "shop" ? "-translate-x-1/2" : "translate-x-0"}`}>
+          <div className={`flex w-[200%] transition-transform duration-500 ${activeMenu === "services" ? "-translate-x-1/2" : "translate-x-0"}`}>
 
             <div className="w-1/2 px-6 pt-12">
               <div className="space-y-2 text-[24px]">
-                <div
-                  className="flex justify-between cursor-pointer"
-                >
-                  <span>Services</span>
-                  <span>→</span>
-                </div>
+              <div
+  onClick={() => setActiveMenu("services")}
+  className="flex justify-between cursor-pointer"
+>
+  <span>Services</span>
+  <span>→</span>
+</div>
 
                 <div className="flex justify-between">
                   <span>Careers</span>
@@ -328,28 +329,29 @@ export default function Navbar() {
             <div className="w-1/2 px-6 pt-12 flex flex-col h-full">
 
               <div className="space-y-2 text-[24px]">
-                {shopItems.map((item, i) => (
-                  <p key={i} className="cursor-pointer">
-                    {item}
-                  </p>
-                ))}
+              {[
+  { label: "Road", path: "/road" },
+  { label: "Air", path: "/air" },
+  { label: "Sea", path: "/sea" },
+  { label: "Customs", path: "/customs" },
+  { label: "Warehousing", path: "/warehousing" },
+  { label: "Projects handling", path: "/projects" },
+].map((item) => (
+  <p
+    key={item.label}
+    onClick={() => {
+      setMobileMenuOpen(false);
+      setActiveMenu("main");
+      setTimeout(() => navigate(item.path), 300);
+    }}
+    className="cursor-pointer"
+  >
+    {item.label}
+  </p>
+))}
               </div>
 
-              <div className="mt-30">
-                <p className="text-[11px] uppercase mb-4 tracking-wide">
-                  Get Inspired
-                </p>
-
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <img src="/cf1.jpg" className="w-full h-[180px] object-cover" />
-                  </div>
-
-                  <div>
-                    <img src="/coffee1.jpeg" className="w-full h-[180px] object-cover" />
-                  </div>
-                </div>
-              </div>
+            
 
             </div>
 
