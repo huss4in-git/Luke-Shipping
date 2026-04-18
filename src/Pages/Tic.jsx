@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
+import Ticservice from "../Components/Ticservice";
 
 export default function Tic() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -344,6 +345,7 @@ export default function Tic() {
   </div>
 </div>
 
+            <Ticservice />
             <Footer />
 
         </>

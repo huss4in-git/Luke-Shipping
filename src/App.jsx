@@ -20,6 +20,7 @@ import ScrollToTop from './Components/ScrollToTop';
 import Banner from './Components/Banner';
 import Projects from './Pages/Projects';
 import Aboutus from './Pages/Aboutus';
+import Auditing from './Pages/Auditing';
 
 
 function Home() {
@@ -73,6 +74,7 @@ function App() {
         <Route path='/warehousing' element={<Warehousing />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/about' element={<Aboutus />} />
+        <Route path='/auditing' element={<Auditing />} />
       </Routes>
     </Router>
   );
