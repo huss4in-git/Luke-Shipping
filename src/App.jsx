@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Nav';
 import About from './Components/About';
@@ -21,6 +21,7 @@ import Banner from './Components/Banner';
 import Projects from './Pages/Projects';
 import Aboutus from './Pages/Aboutus';
 import Auditing from './Pages/Auditing';
+import Inspection from './Pages/Inspection';
 
 
 function Home() {
@@ -75,6 +76,7 @@ function App() {
         <Route path='/projects' element={<Projects />} />
         <Route path='/about' element={<Aboutus />} />
         <Route path='/auditing' element={<Auditing />} />
+        <Route path='/inspection' element={<Inspection />} />
       </Routes>
     </Router>
   );

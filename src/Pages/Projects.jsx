@@ -187,7 +187,7 @@ export default function Road() {
                         </h1>
 
                         <div className="mt-6 max-w-xl text-sm opacity-90">
-                        Whether it's large-scale projects, tight timelines or custom requirements: We tailor every project for smooth and efficient execution.
+                        Whether it's large-scale projects, tight timelines or custom requirements: <span style={{ color: '#FD9708' }}>Luke</span> will tailor every project for smooth and efficient execution.
                         </div>
 
                     </div>

@@ -229,7 +229,7 @@ export default function Navbar() {
           <div className="max-w-3xl">
 
             <h1 className="text-6xl md:text-7xl mb-6 leading-tight">
-              Your Cargo, Our Mission <br /> Built On Trust
+              Your Cargo, Our Mission <br /> Built On <span style={{color:'#FD9708'}}>Trust</span>
             </h1>
 
             <p className="text-lg max-w-xl mx-auto mb-8">
@@ -238,7 +238,7 @@ export default function Navbar() {
 
             <button
               onClick={() => navigate("/contact")}
-              className="bg-[#FD9708] text-black cursor-pointer px-10 py-4 text-[13px] rounded-full uppercase tracking-wide hover:bg-black hover:text-white transition"
+              className="bg-[#FD9708] text-[black] cursor-pointer px-10 py-4 text-[13px] rounded-full uppercase tracking-wide hover:bg-[black]  hover:text-[#FD9708] transition"
             >
               Request a Quote
             </button>
@@ -248,7 +248,7 @@ export default function Navbar() {
 
         {/* MOBILE HERO */}
         <div className="md:hidden absolute left-0 right-0 bottom-50 flex flex-col items-center text-white text-center px-6" style={{ fontFamily: "nb-thin" }}>
-          <h1 className="text-4xl mb-4">Your Cargo, <br /> Our Mission <br /> Built On Trust</h1>
+          <h1 className="text-4xl mb-4">Your Cargo, <br /> Our Mission <br /> Built On <span style={{color:'#FD9708'}}>Trust</span></h1>
           <p className="text-sm max-w-[260px] mb-6">
             Experience world-class transport of massive industrial loads — safely, globally and on time.
           </p>

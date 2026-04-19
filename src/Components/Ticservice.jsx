@@ -8,6 +8,7 @@ import {
     ClipboardList,
     ShieldCheck
 } from "lucide-react";
+import Banner from "./Banner";
 
 export default function Ticservice() {
     const navigate = useNavigate();
@@ -64,6 +65,7 @@ export default function Ticservice() {
     ];
 
     return (
+        <>
         <section className="px-1 md:px-2 md:py-30 py-25">
             <div className="w-full px-6 xl:px-10 2xl:px-24">
 
@@ -90,7 +92,7 @@ export default function Ticservice() {
                             onClick={() => {
                                 const routes = {
                                     Auditing: "/auditing",
-                                    Sea: "/sea",
+                                    Inspection: "/inspection",
                                     Air: "/air",
                                     "Customs Clearance": "/customs",
                                     "Warehousing & Distribution": "/warehousing",
@@ -136,7 +138,7 @@ export default function Ticservice() {
 
                 {/* ---------------- DESKTOP ---------------- */}
                 <div
-                    className="hidden md:grid md:grid-cols-4 gap-0.5 md:px-7"
+                    className="hidden md:grid md:grid-cols-4 gap-0.5 md:px-7 mb-10"
                     style={{ fontFamily: "nb-thin" }}
                 >
 
@@ -146,7 +148,7 @@ export default function Ticservice() {
                             onClick={() => {
                                 const routes = {
                                     Auditing: "/auditing",
-                                    Sea: "/sea",
+                                    Inspection: "/inspection",
                                     Air: "/air",
                                     "Customs Clearance": "/customs",
                                     "Warehousing & Distribution": "/warehousing",
@@ -201,6 +203,9 @@ export default function Ticservice() {
 
 
             </div>
+            
         </section>
+        <Banner />
+        </>
     );
 }

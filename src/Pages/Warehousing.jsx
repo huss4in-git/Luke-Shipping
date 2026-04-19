@@ -184,7 +184,7 @@ export default function Road() {
                         </h1>
 
                         <div className="mt-6 max-w-xl text-sm opacity-90">
-                        Whether it's distribution logistics, just-in-time delivery or value-added services: We tailor your warehouse processes.
+                        Whether it's distribution logistics, just-in-time delivery or value-added services: <span style={{ color: '#FD9708' }}>Luke</span> will tailor your warehouse processes.
                         </div>
 
                     </div>

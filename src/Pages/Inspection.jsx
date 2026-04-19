@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserCheck, ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users } from "lucide-react";
-import Auditingsection from "../Components/Auditingsection";
 import Footer from "../Components/Footer";
 import Auditingsecond from "../Components/Auditingsecond";
 import Banner from "../Components/Banner";
+import Inspectionsection from "../Components/Inspectionsection";
 
-export default function Auditing() {
+export default function Inspection() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [solidNav, setSolidNav] = useState(false);
     const [navVisible, setNavVisible] = useState(true);
@@ -195,8 +195,8 @@ export default function Auditing() {
                 <div className="hidden md:flex absolute inset-0 items-end pb-24 px-16 text-white">
                     <div className="flex items-end justify-between w-full">
                         <div className="max-w-2xl">
-                            <p className="text-sm mb-4 opacity-60">Home / Services / Auditing</p>
-                            <h1 className="text-6xl leading-tight">Auditing</h1>
+                            <p className="text-sm mb-4 opacity-60">Home / Services / Inspection</p>
+                            <h1 className="text-6xl leading-tight">Inspection</h1>
                             <p className="mt-4 max-w-xl text-sm opacity-75">
                                 Our expert assessments help organisations improve operations, reduce risks, and maintain a competitive edge amidst industrial and regulatory challenges.
                             </p>
@@ -210,15 +210,15 @@ export default function Auditing() {
                             </div>
                         </div>
                         <div className="flex-shrink-0 opacity-75 mb-2">
-                            <UserCheck size={150} strokeWidth={0.9} color="#FD9708" />
+                            <FileSearch size={150} strokeWidth={0.9} color="#FD9708" />
                         </div>
                     </div>
                 </div>
 
                 {/* MOBILE */}
                 <div className="md:hidden absolute bottom-12 left-0 right-0 px-6 text-white">
-                    <p className="text-[11px] mb-3 opacity-60">Home / Services / Auditing</p>
-                    <h1 className="text-3xl leading-tight mb-3">Auditing</h1>
+                    <p className="text-[11px] mb-3 opacity-60">Home / Services / Inspection</p>
+                    <h1 className="text-3xl leading-tight mb-3">Inspection</h1>
                     <p className="text-xs opacity-70 mb-5">Expert assessments to reduce risks and meet regulatory requirements.</p>
                     <div className="flex gap-3">
                         <button onClick={() => navigate("/contact")} className="bg-[#FD9708] text-[white] text-xs px-5 py-2 rounded-full cursor-pointer" style={{ fontFamily: "nb-thin" }}>Contact Us</button>
@@ -226,7 +226,7 @@ export default function Auditing() {
                     </div>
                 </div>
             </section>
-            <Auditingsection />
+            <Inspectionsection />
             <Auditingsecond />
             <Banner />
             <Footer />
