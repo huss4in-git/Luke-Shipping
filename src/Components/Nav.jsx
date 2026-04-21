@@ -29,7 +29,7 @@ export default function Navbar() {
 
       if (heroImgRef.current) {
         heroImgRef.current.style.transform = `translateY(${currentScroll * 0.2}px)`;
-    }
+      }
 
       lastScroll = currentScroll;
     };
@@ -57,7 +57,7 @@ export default function Navbar() {
       <section className="h-screen relative overflow-hidden">
 
         <img
-         ref={heroImgRef}
+          ref={heroImgRef}
           src="/shipping.jpg"
           alt="Heavy Industry Transport"
           className="absolute inset-0 w-full h-full object-cover"
@@ -137,8 +137,8 @@ export default function Navbar() {
                 {/* DROPDOWN */}
                 <div
                   className={`absolute top-full left-0 transition-all duration-200 ease-in-out ${servicesOpen
-                      ? "opacity-100 pointer-events-auto translate-y-0"
-                      : "opacity-0 pointer-events-none -translate-y-2"
+                    ? "opacity-100 pointer-events-auto translate-y-0"
+                    : "opacity-0 pointer-events-none -translate-y-2"
                     }`}
                   style={{ paddingTop: "12px" }}
                 >
@@ -229,7 +229,7 @@ export default function Navbar() {
           <div className="max-w-3xl">
 
             <h1 className="text-6xl md:text-7xl mb-6 leading-tight">
-              Your Cargo, Our Mission <br /> Built On <span style={{color:'#FD9708'}}>Trust</span>
+              Your Cargo, Our Mission <br /> Built On <span style={{ color: '#FD9708' }}>Trust</span>
             </h1>
 
             <p className="text-lg max-w-xl mx-auto mb-8">
@@ -248,7 +248,7 @@ export default function Navbar() {
 
         {/* MOBILE HERO */}
         <div className="md:hidden absolute left-0 right-0 bottom-50 flex flex-col items-center text-white text-center px-6" style={{ fontFamily: "nb-thin" }}>
-          <h1 className="text-4xl mb-4">Your Cargo, <br /> Our Mission <br /> Built On <span style={{color:'#FD9708'}}>Trust</span></h1>
+          <h1 className="text-4xl mb-4">Your Cargo, <br /> Our Mission <br /> Built On <span style={{ color: '#FD9708' }}>Trust</span></h1>
           <p className="text-sm max-w-[260px] mb-6">
             Experience world-class transport of massive industrial loads — safely, globally and on time.
           </p>
@@ -291,13 +291,13 @@ export default function Navbar() {
 
             <div className="w-1/2 px-6 pt-12">
               <div className="space-y-2 text-[24px]">
-              <div
-  onClick={() => setActiveMenu("services")}
-  className="flex justify-between cursor-pointer"
->
-  <span>Services</span>
-  <span>→</span>
-</div>
+                <div
+                  onClick={() => setActiveMenu("services")}
+                  className="flex justify-between cursor-pointer"
+                >
+                  <span>Services</span>
+                  <span>→</span>
+                </div>
 
                 <div className="flex justify-between">
                   <span>Careers</span>
@@ -329,29 +329,30 @@ export default function Navbar() {
             <div className="w-1/2 px-6 pt-12 flex flex-col h-full">
 
               <div className="space-y-2 text-[24px]">
-              {[
-  { label: "Road", path: "/road" },
-  { label: "Air", path: "/air" },
-  { label: "Sea", path: "/sea" },
-  { label: "Customs", path: "/customs" },
-  { label: "Warehousing", path: "/warehousing" },
-  { label: "Projects handling", path: "/projects" },
-].map((item) => (
-  <p
-    key={item.label}
-    onClick={() => {
-      setMobileMenuOpen(false);
-      setActiveMenu("main");
-      setTimeout(() => navigate(item.path), 300);
-    }}
-    className="cursor-pointer"
-  >
-    {item.label}
-  </p>
-))}
+                {[
+                  { label: "TIC Services", path: "/tic" },
+                  { label: "Road", path: "/road" },
+                  { label: "Air", path: "/air" },
+                  { label: "Sea", path: "/sea" },
+                  { label: "Customs", path: "/customs" },
+                  { label: "Warehousing", path: "/warehousing" },
+                  { label: "Projects handling", path: "/projects" },
+                ].map((item) => (
+                  <p
+                    key={item.label}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setActiveMenu("main");
+                      setTimeout(() => navigate(item.path), 300);
+                    }}
+                    className="cursor-pointer"
+                  >
+                    {item.label}
+                  </p>
+                ))}
               </div>
 
-            
+
 
             </div>
 
