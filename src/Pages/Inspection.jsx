@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserCheck, ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users } from "lucide-react";
 import Footer from "../Components/Footer";
-import Auditingsecond from "../Components/Auditingsecond";
 import Banner from "../Components/Banner";
 import Inspectionsection from "../Components/Inspectionsection";
+import Inspectionsecond from "../Components/Inspectionsecond";
 
 export default function Inspection() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -227,7 +227,7 @@ export default function Inspection() {
                 </div>
             </section>
             <Inspectionsection />
-            <Auditingsecond />
+    
             <Banner />
             <Footer />
         </>

@@ -227,7 +227,7 @@ export default function Auditing() {
                 </div>
             </section>
             <Auditingsection />
-            <Auditingsecond />
+        
             <Banner />
             <Footer />
         </>

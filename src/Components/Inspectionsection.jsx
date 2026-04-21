@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users } from "lucide-react";
+import { ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users, Building, ChartLine, Cpu } from "lucide-react";
 
 export default function Inspectionsection() {
     const [activeSection, setActiveSection] = useState("challenges");
@@ -58,17 +58,17 @@ export default function Inspectionsection() {
             desc: "There is a rising demand for quality assurance services such as pre-shipment and post-shipment inspections to ensure product quality and delivery compliance.",
         },
         {
-            icon: <FileSearch size={48} strokeWidth={1.2} color="#FD9708" />,
+            icon: <ChartLine size={48} strokeWidth={1.2} color="#FD9708" />,
             title: "Costly downtime",
             desc: "Addressing equipment failures through predictive maintenance and risk-based inspections can avoid unplanned shutdowns and optimise operational efficiency.",
         },
         {
-            icon: <FileSearch size={48} strokeWidth={1.2} color="#FD9708" />,
+            icon: <Building size={48} strokeWidth={1.2} color="#FD9708" />,
             title: "Structural integrity",
             desc: "Conducting thorough site assessments and quality control is vital to ensure structural integrity of infrastructure and construction projects.",
         },
         {
-            icon: <FileSearch size={48} strokeWidth={1.2} color="#FD9708" />,
+            icon: <Cpu size={48} strokeWidth={1.2} color="#FD9708" />,
             title: "Technological developments",
             desc: "Businesses need to embrace the adoption of advanced technologies such as drones and digital twins, and the increased demand for non-destructive testing (NDT).",
         },
@@ -131,10 +131,10 @@ export default function Inspectionsection() {
                 <div className="max-w-8xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
                     <div className="max-w-xl">
                         <h2 className="text-3xl md:text-4xl text-[black] mb-4 leading-tight">
-                            Ready to strengthen your audit process?
+                        Need support for your challenges?
                         </h2>
                         <p className="text-sm text-[#0d2240] opacity-70 leading-relaxed">
-                            Speak with our auditing specialists today and discover how we can help your organisation stay compliant and competitive.
+                        Luke provides a comprehensive range of third party inspection services that ensure accountability across every phase of development, operation, and shipment.
                         </p>
                     </div>
                     <div className="flex-shrink-0">

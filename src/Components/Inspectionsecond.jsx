@@ -2,28 +2,47 @@ import { useState, useMemo } from "react";
 import { Car, Users, Leaf, Zap, UtensilsCrossed, Globe, TrainFront, Building2, Settings2, ShoppingCart, Factory, ShoppingBasket, FileCheck, File, NotepadText } from "lucide-react";
 
 const services = [
-  { id: 1, title: "Assessment of Automotive Software Update Procedures", categories: ["Automotive"], Icon: Car },
-  { id: 2, title: "Code of Conduct", categories: ["Consumer Products and Retail", "Manufacturing" , "Building and Construction"], Icon: Users },
-  { id: 3, title: "Energy Certification", categories: ["Sustainability", "Energy"], Icon: Factory },
-  { id: 4, title: "Food Hygiene Audits", categories: ["Consumer Products and Retail"], Icon: UtensilsCrossed },
-  { id: 5, title: "Supplier Audits", categories: ["Consumer Products and Retail"], Icon: ShoppingBasket },
-  { id: 6, title: "Worldwide Responsible Accredited Production (WRAP) Certification", categories: ["Consumer Products and Retail"], Icon: Building2 },
-  { id: 7, title: "amfori Quality Management Initiative (QMI)", categories: ["Consumer Products and Retail"], Icon: FileCheck  },
+  { id: 1, title: "3D AI Construction Inspection", categories: ["Automotive"], Icon: Building2 },
+  { id: 2, title: "Acoustic Emission Testing", categories: ["Consumer Products and Retail", "Manufacturing" , "Building and Construction"], Icon: Users },
+  { id: 3, title: "Acoustic Measurements", categories: ["Sustainability", "Consumer Products and Retail","Automotive","Rail", "Building and Construction"], Icon: ShoppingCart },
+  { id: 4, title: "Air conditioning & ventilation testing inspection & certification", categories: ["Sustainability", "Energy"], Icon: Factory },
+  { id: 5, title: "Airport Infrastructure Services", categories: ["Consumer Products and Retail"], Icon: UtensilsCrossed },
+  { id: 6, title: "Alarm Receiving Centres", categories: ["Sustainability", "Manufacturing","Rail", "Consumer Products and Retail", "Automotive", "Building and Construction"], Icon: Globe },
+  { id: 7, title: "Battery crash tests for electric vehicles", categories: ["Consumer Products and Retail"], Icon: ShoppingBasket },
+  { id: 8, title: "Boiler and Machinery Engineering", categories: ["Consumer Products and Retail"], Icon: Building2 },
+  { id: 9, title: "Cableway Services", categories: ["Sustainability","Consumer Products and Retail", "Manufacturing"], Icon: File },
+  { id: 10, title: "Certification according to TSI and NNTR", categories: ["Sustainability","Consumer Products and Retail"], Icon: NotepadText },
+  { id: 11, title: "Climate Change Risk Assessment", categories: ["Consumer Products and Retail"], Icon: FileCheck  },
+  { id: 12, title: "Complete railway system services", categories: ["Automotive"], Icon: Building2 },
+  { id: 13, title: "Acoustic Emission Testing", categories: ["Consumer Products and Retail", "Manufacturing" , "Building and Construction"], Icon: Users },
+  { id: 3, title: "Acoustic Measurements", categories: ["Sustainability", "Consumer Products and Retail","Automotive","Rail", "Building and Construction"], Icon: ShoppingCart },
+  { id: 4, title: "Air conditioning & ventilation testing inspection & certification", categories: ["Sustainability", "Energy"], Icon: Factory },
+  { id: 5, title: "Airport Infrastructure Services", categories: ["Consumer Products and Retail"], Icon: UtensilsCrossed },
+  { id: 6, title: "Alarm Receiving Centres", categories: ["Sustainability", "Manufacturing","Rail", "Consumer Products and Retail", "Automotive", "Building and Construction"], Icon: Globe },
+  { id: 7, title: "Battery crash tests for electric vehicles", categories: ["Consumer Products and Retail"], Icon: ShoppingBasket },
+  { id: 8, title: "Boiler and Machinery Engineering", categories: ["Consumer Products and Retail"], Icon: Building2 },
+  { id: 9, title: "Cableway Services", categories: ["Sustainability","Consumer Products and Retail", "Manufacturing"], Icon: File },
+  { id: 10, title: "Certification according to TSI and NNTR", categories: ["Sustainability","Consumer Products and Retail"], Icon: NotepadText },
+  { id: 11, title: "Climate Change Risk Assessment", categories: ["Consumer Products and Retail"], Icon: FileCheck  },
+
 ];
 
 const categories = [
   "Consumer Products and Retail",
   "Automotive",
   "Building and Construction",
+  "Chemical Processing",
+  "Rail",
   "Energy",
   "Manufacturing",
+  "Sustainability",
 ];
 
 const categoryIcons = {
   Sustainability: <Leaf className="w-4 h-4 inline mr-1" />,
 };
 
-export default function Auditingsecond() {
+export default function Inspectionsecond() {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -52,7 +71,7 @@ export default function Auditingsecond() {
       {/* Header Row */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4" style={{fontFamily:'nb-thin'}}>
         <h1 className="md:text-4xl text-3xl text-[black] ">
-          Discover our auditing services
+          Discover our inspection services
         </h1>
         {/* Search */}
         <div className="relative w-full md:w-96">
