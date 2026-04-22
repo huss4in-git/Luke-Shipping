@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users, Building, ChartLine, Cpu } from "lucide-react";
+import { ClipboardCheck, Award, PackageSearch, TrendingUp, ShieldAlert, ShieldCheck, Globe, Clock, FileSearch, Users, Building, ChartLine, Cpu, FileCheck, Handshake, MonitorCheck, ChartColumnDecreasing, Settings } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Inspectionsection() {
+export default function Testingsection() {
+
     const sectionRef = useRef(null);
     const itemsRef = useRef([]);
 
@@ -71,36 +72,31 @@ export default function Inspectionsection() {
 
     const challenges = [
         {
-            icon: <ShieldAlert size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Compliance with regulations",
-            desc: "Businesses need to identify faults early, prevent costly failures, and ensure compliance with global, national, and industry-specific codes and standards.",
+            icon: <FileSearch size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Navigating a complex regulatory landscape",
+            desc: "Different countries have various local, regional, and international regulations. Luke’s product quality testing services help you ensure compliance.",
         },
         {
-            icon: <TrendingUp size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Equipment safety and reliability",
-            desc: "Third party inspection services are vital for safety and efficiency of equipment such as lifts, cranes, and mechanical, electrical, and plumbing (MEP) systems.",
+            icon: <Settings size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Managing increased testing complexity",
+            desc: "Testing complexity grows with advanced products, technology, and changing regulations. Our experts offer efficient guidance and personalised support.",
         },
         {
-            icon: <ClipboardCheck size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Supply chain quality control",
-            desc: "There is a rising demand for quality assurance services such as pre-shipment and post-shipment inspections to ensure product quality and delivery compliance.",
+            icon: <PackageSearch size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Achieving interoperability",
+            desc: "Our product testing services ensure products work smoothly with other devices and systems. We identify defects early, reduce risks, and enhance customer trust.",
         },
         {
-            icon: <ChartLine size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Costly downtime",
-            desc: "Addressing equipment failures through predictive maintenance and risk-based inspections can avoid unplanned shutdowns and optimise operational efficiency.",
+            icon: <Globe size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Gaining access to global markets",
+            desc: "From certifications to safety testing, our global accredited product testing labs and experts ensure your products are market-ready and succeed globally.",
         },
         {
-            icon: <Building size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Structural integrity",
-            desc: "Conducting thorough site assessments and quality control is vital to ensure structural integrity of infrastructure and construction projects.",
+            icon: <ShieldCheck size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Responding to increased safety and sustainability concerns",
+            desc: "Our wide range of technical competencies can help your products meet stringent environmental standards and sustainability expectations to ensure safety.",
         },
-        {
-            icon: <Cpu size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Technological developments",
-            desc: "Businesses need to embrace the adoption of advanced technologies such as drones and digital twins, and the increased demand for non-destructive testing (NDT).",
-        },
-       
+
        
     ];
 
@@ -162,7 +158,7 @@ export default function Inspectionsection() {
                         Need support for your challenges?
                         </h2>
                         <p className="text-sm text-[#0d2240] opacity-70 leading-relaxed">
-                        Luke provides a comprehensive range of third party inspection services that ensure accountability across every phase of development, operation, and shipment.
+                        Our experts have deep knowledge to help you overcome your most common challenges through our product testing services.
                         </p>
                     </div>
                     <div className="flex-shrink-0">

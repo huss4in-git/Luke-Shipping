@@ -22,6 +22,11 @@ import Projects from './Pages/Projects';
 import Aboutus from './Pages/Aboutus';
 import Auditing from './Pages/Auditing';
 import Inspection from './Pages/Inspection';
+import Management from './Pages/Management';
+import Product from './Pages/Product';
+import Technical from './Pages/Technical';
+import Testing from './Pages/Testing';
+import Verification from './Pages/Verification';
 
 
 function Home() {
@@ -77,6 +82,11 @@ function App() {
         <Route path='/about' element={<Aboutus />} />
         <Route path='/auditing' element={<Auditing />} />
         <Route path='/inspection' element={<Inspection />} />
+        <Route path='/management' element={<Management />} />
+        <Route path='/product' element={<Product />} />
+        <Route path='/technical' element={<Technical />} />
+        <Route path='/testing' element={<Testing />} />
+        <Route path='/verification' element={<Verification />} />
       </Routes>
     </Router>
   );

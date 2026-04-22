@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users, Building, ChartLine, Cpu } from "lucide-react";
+import { ClipboardCheck, TrendingUp, ShieldAlert ,ShieldCheck, Clock, FileSearch, Users, ChartColumnDecreasing, Settings } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Inspectionsection() {
+export default function Technicalsection() {
+
     const sectionRef = useRef(null);
     const itemsRef = useRef([]);
 
@@ -30,7 +31,6 @@ export default function Inspectionsection() {
     
         return () => ctx.revert();
       }, []);
-
     const [activeSection, setActiveSection] = useState("challenges");
     const containerRef = useRef(null);
     const navigate = useNavigate();
@@ -71,34 +71,29 @@ export default function Inspectionsection() {
 
     const challenges = [
         {
-            icon: <ShieldAlert size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Compliance with regulations",
-            desc: "Businesses need to identify faults early, prevent costly failures, and ensure compliance with global, national, and industry-specific codes and standards.",
-        },
-        {
-            icon: <TrendingUp size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Equipment safety and reliability",
-            desc: "Third party inspection services are vital for safety and efficiency of equipment such as lifts, cranes, and mechanical, electrical, and plumbing (MEP) systems.",
+            icon: <ChartColumnDecreasing size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Risk management",
+            desc: "Technical advisory services are vital to identify and address safety, functional, and environmental risks as well as operational challenges in complex projects.",
         },
         {
             icon: <ClipboardCheck size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Supply chain quality control",
-            desc: "There is a rising demand for quality assurance services such as pre-shipment and post-shipment inspections to ensure product quality and delivery compliance.",
+            title: "Regulatory compliance",
+            desc: "There is a growing demand for regulatory compliance in various industries. This includes meeting stringent licensing, environmental, and quality standards.",
         },
         {
-            icon: <ChartLine size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Costly downtime",
-            desc: "Addressing equipment failures through predictive maintenance and risk-based inspections can avoid unplanned shutdowns and optimise operational efficiency.",
+            icon: <Settings size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Resource optimisation",
+            desc: "Resource and business process optimisation are important for balancing costs, energy efficiency, and quality in project design and execution.",
         },
         {
-            icon: <Building size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Structural integrity",
-            desc: "Conducting thorough site assessments and quality control is vital to ensure structural integrity of infrastructure and construction projects.",
+            icon: <ShieldCheck size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Process safety",
+            desc: "Functional safety services and seismic risk assessment can help implement robust safety systems and ensure due diligence, reducing losses from process failures.",
         },
         {
-            icon: <Cpu size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Technological developments",
-            desc: "Businesses need to embrace the adoption of advanced technologies such as drones and digital twins, and the increased demand for non-destructive testing (NDT).",
+            icon: <Clock size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Asset lifespan",
+            desc: "Managing plant life extension, decommissioning, and assessing infrastructure to improve durability are all part of our business process optimisation services.",
         },
        
        
@@ -159,11 +154,10 @@ export default function Inspectionsection() {
                 <div className="max-w-8xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
                     <div className="max-w-xl">
                         <h2 className="text-3xl md:text-4xl text-[black] mb-4 leading-tight">
-                        Need support for your challenges?
+                            Need support for your challenges?
                         </h2>
                         <p className="text-sm text-[#0d2240] opacity-70 leading-relaxed">
-                        Luke provides a comprehensive range of third party inspection services that ensure accountability across every phase of development, operation, and shipment.
-                        </p>
+                        Our experts have the deep knowledge to help you overcome your most common challenges through our technical advisory services.                    </p>
                     </div>
                     <div className="flex-shrink-0">
                         <button

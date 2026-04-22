@@ -1,8 +1,36 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Auditingsection() {
+    const sectionRef = useRef(null);
+    const itemsRef = useRef([]);
+
+
+      useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+    
+        const ctx = gsap.context(() => {
+          gsap.from(itemsRef.current, {
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 85%",
+              once: true,
+            },
+            opacity: 0,
+            y: 60,
+            filter: "blur(6px)",
+            duration: 0.8,
+            stagger: 0.12,
+            ease: "power2.out",
+          });
+        }, sectionRef);
+    
+        return () => ctx.revert();
+      }, []);
+
     const [activeSection, setActiveSection] = useState("challenges");
     const containerRef = useRef(null);
     const navigate = useNavigate();
@@ -95,7 +123,7 @@ export default function Auditingsection() {
                     </aside> */}
 
                     {/* RIGHT: all sections stacked */}
-                    <div className="flex-1" style={{ fontFamily: "nb-thin" }}>
+                    <div ref={(el) => (itemsRef.current[0] = el)} className="flex-1" style={{ fontFamily: "nb-thin" }}>
 
                         <section id="challenges" className="scroll-mt-24 mb-5 md:mb-10">
                             <h2 className="text-3xl md:text-4xl text-black mb-12">Common challenges</h2>

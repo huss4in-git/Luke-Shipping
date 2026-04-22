@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users, Building, ChartLine, Cpu } from "lucide-react";
+import { ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users, Building, ChartLine, Cpu, Handshake, MonitorCheck, ChartColumnDecreasing } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Inspectionsection() {
+export default function Managementsection() {
+
     const sectionRef = useRef(null);
     const itemsRef = useRef([]);
 
@@ -71,36 +72,30 @@ export default function Inspectionsection() {
 
     const challenges = [
         {
-            icon: <ShieldAlert size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Compliance with regulations",
-            desc: "Businesses need to identify faults early, prevent costly failures, and ensure compliance with global, national, and industry-specific codes and standards.",
-        },
-        {
-            icon: <TrendingUp size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Equipment safety and reliability",
-            desc: "Third party inspection services are vital for safety and efficiency of equipment such as lifts, cranes, and mechanical, electrical, and plumbing (MEP) systems.",
+            icon: <FileSearch size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Compliance and updates",
+            desc: "Our management system certification services provide you with a fast, efficient way to manage regulatory, supply chain, and reputational requirements.",
         },
         {
             icon: <ClipboardCheck size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Supply chain quality control",
-            desc: "There is a rising demand for quality assurance services such as pre-shipment and post-shipment inspections to ensure product quality and delivery compliance.",
+            title: "Quality management and improvement",
+            desc: "Quality management across operations is complex. We help you increase efficiency and compliance to avoid liabilities and optimise time to market and profits.",
         },
         {
-            icon: <ChartLine size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Costly downtime",
-            desc: "Addressing equipment failures through predictive maintenance and risk-based inspections can avoid unplanned shutdowns and optimise operational efficiency.",
+            icon: <Handshake size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Trust and credibility",
+            desc: "Our Central Certification Body harmonises global practices and enhances quality. This builds trust with customers and partners, helping you win new business.",
         },
         {
-            icon: <Building size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Structural integrity",
-            desc: "Conducting thorough site assessments and quality control is vital to ensure structural integrity of infrastructure and construction projects.",
+            icon: <MonitorCheck size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Security validation through information security audits",
+            desc: "Our information security audits validate controls, ensuring sensitive data (like customer’s intellectual property) and systems handling are properly protected.",
         },
         {
-            icon: <Cpu size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Technological developments",
-            desc: "Businesses need to embrace the adoption of advanced technologies such as drones and digital twins, and the increased demand for non-destructive testing (NDT).",
+            icon: <ChartColumnDecreasing size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Risk mitigation",
+            desc: "We comprehensively and independently audit your business operations, facilities, and supply chain to identify vulnerabilities and areas for improvement.",
         },
-       
        
     ];
 
@@ -162,7 +157,7 @@ export default function Inspectionsection() {
                         Need support for your challenges?
                         </h2>
                         <p className="text-sm text-[#0d2240] opacity-70 leading-relaxed">
-                        Luke provides a comprehensive range of third party inspection services that ensure accountability across every phase of development, operation, and shipment.
+                        Our experts have the deep knowledge to help you overcome your most common challenges through our management system certification services.
                         </p>
                     </div>
                     <div className="flex-shrink-0">

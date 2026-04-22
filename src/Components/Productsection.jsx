@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users, Building, ChartLine, Cpu } from "lucide-react";
+import { ClipboardCheck, Award, TrendingUp, ShieldAlert, Globe, Clock, FileSearch, Users, Building, ChartLine, Cpu, FileCheck, Handshake, MonitorCheck, ChartColumnDecreasing } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Inspectionsection() {
+export default function Productsection() {
+
     const sectionRef = useRef(null);
     const itemsRef = useRef([]);
 
@@ -71,36 +72,26 @@ export default function Inspectionsection() {
 
     const challenges = [
         {
-            icon: <ShieldAlert size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Compliance with regulations",
-            desc: "Businesses need to identify faults early, prevent costly failures, and ensure compliance with global, national, and industry-specific codes and standards.",
-        },
-        {
-            icon: <TrendingUp size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Equipment safety and reliability",
-            desc: "Third party inspection services are vital for safety and efficiency of equipment such as lifts, cranes, and mechanical, electrical, and plumbing (MEP) systems.",
+            icon: <FileCheck size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Navigating national and international requirements",
+            desc: "Our regulatory experts have detailed knowledge to help you get certifications and approvals in the most efficient manner to export products to global markets.",
         },
         {
             icon: <ClipboardCheck size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Supply chain quality control",
-            desc: "There is a rising demand for quality assurance services such as pre-shipment and post-shipment inspections to ensure product quality and delivery compliance.",
+            title: "Demonstrating that your products have been certified to applicable standards",
+            desc: "You need to ensure that you meet the standards to differentiate your product. We provide this credibility to the marketplace.",
         },
         {
-            icon: <ChartLine size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Costly downtime",
-            desc: "Addressing equipment failures through predictive maintenance and risk-based inspections can avoid unplanned shutdowns and optimise operational efficiency.",
+            icon: <Globe size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Streamlining and managing conformity processes",
+            desc: "We improve market access and time-to-market for our customers and help you to bring products more efficiently to the market.",
         },
         {
-            icon: <Building size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Structural integrity",
-            desc: "Conducting thorough site assessments and quality control is vital to ensure structural integrity of infrastructure and construction projects.",
+            icon: <Award size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Delivering quality that adds value",
+            desc: "Certification marks and certificates are recognised internationally, representing third-party endorsement by a globally renowned organisation.",
         },
-        {
-            icon: <Cpu size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Technological developments",
-            desc: "Businesses need to embrace the adoption of advanced technologies such as drones and digital twins, and the increased demand for non-destructive testing (NDT).",
-        },
-       
+
        
     ];
 
@@ -137,7 +128,7 @@ export default function Inspectionsection() {
 
                         <section id="challenges" className="scroll-mt-24 mb-5 md:mb-10">
                             <h2 className="text-3xl md:text-4xl text-black mb-12">Common challenges</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
                                 {challenges.map((c, i) => (
                                     <div key={i} className="flex flex-col gap-4">
                                         <div className="w-14 h-14">{c.icon}</div>
@@ -162,7 +153,7 @@ export default function Inspectionsection() {
                         Need support for your challenges?
                         </h2>
                         <p className="text-sm text-[#0d2240] opacity-70 leading-relaxed">
-                        Luke provides a comprehensive range of third party inspection services that ensure accountability across every phase of development, operation, and shipment.
+                        Luke issues a wide range of product certifications and marks through our certification bodies and expertise in global market access.
                         </p>
                     </div>
                     <div className="flex-shrink-0">

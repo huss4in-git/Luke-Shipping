@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, Users, Building, ChartLine, Cpu } from "lucide-react";
+import { ClipboardCheck, Award, FileStack, Network, ChartNoAxesCombined, TrendingUp, ShieldAlert, Globe, Clock, FileSearch, Users, Building, ChartLine, Cpu, FileCheck, Handshake, MonitorCheck, ChartColumnDecreasing } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Inspectionsection() {
+export default function Verificationsection() {
+
     const sectionRef = useRef(null);
     const itemsRef = useRef([]);
 
@@ -71,36 +72,26 @@ export default function Inspectionsection() {
 
     const challenges = [
         {
-            icon: <ShieldAlert size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Compliance with regulations",
-            desc: "Businesses need to identify faults early, prevent costly failures, and ensure compliance with global, national, and industry-specific codes and standards.",
+            icon: <Network size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Prove credibility to multiple stakeholders",
+            desc: "You are under pressure to show transparency in a competitive market. Luke’s validation services & verification services prove credibility to stakeholders.",
         },
         {
-            icon: <TrendingUp size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Equipment safety and reliability",
-            desc: "Third party inspection services are vital for safety and efficiency of equipment such as lifts, cranes, and mechanical, electrical, and plumbing (MEP) systems.",
+            icon: <Users size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Differentiate yourself from the competition",
+            desc: "You must convince customers, partners & employees of your credibility. Our verification and validation services give you the tools to acheive this.",
         },
         {
-            icon: <ClipboardCheck size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Supply chain quality control",
-            desc: "There is a rising demand for quality assurance services such as pre-shipment and post-shipment inspections to ensure product quality and delivery compliance.",
+            icon: <FileStack size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Ensuring data quality and accuracy",
+            desc: "Specific information declaration is obligated by law. Our robust assessment delivers compliance assurance your claims or declared information are accurate.",
         },
         {
-            icon: <ChartLine size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Costly downtime",
-            desc: "Addressing equipment failures through predictive maintenance and risk-based inspections can avoid unplanned shutdowns and optimise operational efficiency.",
+            icon: <ChartNoAxesCombined size={48} strokeWidth={1.2} color="#FD9708" />,
+            title: "Investment burden",
+            desc: "Our effective validation services & verification services minimise time & costs, creating assessments that combine regulatory & industry specific requirements.",
         },
-        {
-            icon: <Building size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Structural integrity",
-            desc: "Conducting thorough site assessments and quality control is vital to ensure structural integrity of infrastructure and construction projects.",
-        },
-        {
-            icon: <Cpu size={48} strokeWidth={1.2} color="#FD9708" />,
-            title: "Technological developments",
-            desc: "Businesses need to embrace the adoption of advanced technologies such as drones and digital twins, and the increased demand for non-destructive testing (NDT).",
-        },
-       
+
        
     ];
 
@@ -137,7 +128,7 @@ export default function Inspectionsection() {
 
                         <section id="challenges" className="scroll-mt-24 mb-5 md:mb-10">
                             <h2 className="text-3xl md:text-4xl text-black mb-12">Common challenges</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
                                 {challenges.map((c, i) => (
                                     <div key={i} className="flex flex-col gap-4">
                                         <div className="w-14 h-14">{c.icon}</div>
@@ -162,7 +153,7 @@ export default function Inspectionsection() {
                         Need support for your challenges?
                         </h2>
                         <p className="text-sm text-[#0d2240] opacity-70 leading-relaxed">
-                        Luke provides a comprehensive range of third party inspection services that ensure accountability across every phase of development, operation, and shipment.
+                        Partner with our verification and validation experts to prove the credibility of your claims and gain stakeholder trust.
                         </p>
                     </div>
                     <div className="flex-shrink-0">

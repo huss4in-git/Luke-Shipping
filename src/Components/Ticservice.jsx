@@ -45,19 +45,13 @@ export default function Ticservice() {
             size: "h-15 w-15"
         },
         {
-            title: "Verification",
-            icon: ShieldCheck,
-            desc: "Ensuring processes, systems, and products meet specified requirements and perform as intended with reliability.",
-            size: "h-15 w-15"
-        },
-        {
             title: "Testing",
             icon: ClipboardList,
             desc: "Comprehensive testing services to evaluate product performance, safety, and compliance with applicable standards.",
             size: "h-15 w-15"
         },
         {
-            title: "Validation",
+            title: "Verification & Validation",
             icon: ShieldCheck,
             desc: "Ensuring processes, systems, and products meet specified requirements and perform as intended with reliability.",
             size: "h-15 w-15"
@@ -93,10 +87,11 @@ export default function Ticservice() {
                                 const routes = {
                                     Auditing: "/auditing",
                                     Inspection: "/inspection",
-                                    Air: "/air",
-                                    "Customs Clearance": "/customs",
-                                    "Warehousing & Distribution": "/warehousing",
-                                    "Projects Handling": "/projects",
+                                    "Management System Certification" :"/management",
+                                    "Product Certification":"/product",
+                                    "Technical Advisory":"/technical",
+                                    Testing : "/testing",
+                                    "Verification & Validation":"/verification"
                                 };
 
                                 navigate(routes[item.title]);
@@ -149,10 +144,12 @@ export default function Ticservice() {
                                 const routes = {
                                     Auditing: "/auditing",
                                     Inspection: "/inspection",
-                                    Air: "/air",
-                                    "Customs Clearance": "/customs",
-                                    "Warehousing & Distribution": "/warehousing",
+                                    "Management System Certification" :"/management",
+                                    "Product Certification":"/product",
+                                    "Technical Advisory":"/technical",
                                     "Projects Handling": "/projects",
+                                    Testing : "/testing",
+                                    "Verification & Validation":"/verification"
                                 };
 
                                 navigate(routes[item.title]);
