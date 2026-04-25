@@ -182,7 +182,7 @@ export default function Aboutquality() {
                                     </p>
                                 </div>
                                 <p
-                                    className="text-base sm:text-[20px]  text-gray-950"
+                                    className="text-base leading-relaxed sm:text-[20px] text-gray-950"
                                     style={{ fontFamily: "nb-thin" }}
                                 >
                                     {FIRST_CAPTION_BODY}
@@ -206,7 +206,7 @@ export default function Aboutquality() {
 
                             {/* Heading — no border, slightly larger */}
                             <p
-                                className="text-[2rem] md:ms-37 sm:text-[2.4rem] lg:text-[1.75rem] leading-[1.15] text-gray-950 mb-6"
+                                className="text-[1.5rem] md:ms-37 sm:text-[2.4rem] lg:text-[1.75rem] leading-[1.15] text-gray-950 mb-6"
                                 style={{ fontFamily: "nb-thin", whiteSpace: "pre-line" }}
                             >
                                 {EMPLOYEES_HEADING}
@@ -228,7 +228,7 @@ export default function Aboutquality() {
                         }}
                     >
                         <p
-                            className="text-[1.8rem] sm:text-[2.5rem] lg:text-[2rem] leading-[1.15] text-gray-950 max-w-[640px]"
+                            className="text-[1.3rem] sm:text-[2.5rem] lg:text-[2rem] leading-[1.15] text-gray-950 max-w-[640px]"
                             style={{ fontFamily: "nb-thin", whiteSpace: "pre-line" }}
                         >
                             {BOTTOM_STATEMENT}
