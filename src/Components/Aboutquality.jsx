@@ -54,7 +54,7 @@ function useFadeIn(threshold = 0.1) {
 function SectionBadge({ number, label }) {
     return (
         <span
-            className="inline-flex items-center gap-2 border border-gray-300 rounded-full px-3 py-1 text-xs tracking-widest text-gray-500 font-medium uppercase w-fit"
+            className="inline-flex items-center bg-white gap-2 border border-gray-300 rounded-full px-3 py-1 text-xs tracking-widest text-gray-500 font-medium uppercase w-fit"
             style={{ fontFamily: "nb-thin" }}
         >
             <span style={{ color: "#fda408" }}>{number}</span> — {label}
