@@ -201,10 +201,10 @@ export default function Inspection() {
                                 Our expert assessments help organisations improve operations, reduce risks, and maintain a competitive edge amidst industrial and regulatory challenges.
                             </p>
                             <div className="flex items-center gap-4 mt-8">
-                                <button onClick={() => navigate("/contact")} className="bg-[#FD9708] hover:text-[#FD9708] text-[white] text-sm px-6 py-3 rounded-full hover:bg-black/80 transition-colors duration-200 cursor-pointer" style={{ fontFamily: "nb-thin" }}>
+                            <button onClick={() => window.open("https://wa.me/966582780836", "_blank")} className="bg-[#FD9708] hover:text-[#FD9708] text-[white] text-sm px-6 py-3 rounded-full hover:bg-black/80 transition-colors duration-200 cursor-pointer" style={{ fontFamily: "nb-thin" }}>
                                     Contact Us
                                 </button>
-                                <button onClick={() => navigate("/services")} className="border border-[#FD9708] hover:border-[black] text-[white] text-sm px-6 py-3 rounded-full hover:bg-black hover:text-[#FD9708] transition-all duration-200 cursor-pointer" style={{ fontFamily: "nb-thin" }}>
+                                <button className="border border-[#FD9708] hover:border-[black] text-[white] text-sm px-6 py-3 rounded-full hover:bg-black hover:text-[#FD9708] transition-all duration-200 cursor-pointer" style={{ fontFamily: "nb-thin" }}>
                                     Explore our services
                                 </button>
                             </div>
@@ -221,7 +221,7 @@ export default function Inspection() {
                     <h1 className="text-3xl leading-tight mb-3">Inspection</h1>
                     <p className="text-xs opacity-70 mb-5">Expert assessments to reduce risks and meet regulatory requirements.</p>
                     <div className="flex gap-3">
-                        <button onClick={() => navigate("/contact")} className="bg-[#FD9708] text-[white] text-xs px-5 py-2 rounded-full cursor-pointer" style={{ fontFamily: "nb-thin" }}>Contact Us</button>
+                    <button onClick={() => window.open("https://wa.me/966582780836", "_blank")} className="bg-[#FD9708] text-[white] text-xs px-5 py-2 rounded-full cursor-pointer" style={{ fontFamily: "nb-thin" }}>Contact Us</button>
                         <button onClick={() => navigate("/services")} className="border border-[#FD9708] text-white text-xs px-5 py-2 rounded-full cursor-pointer" style={{ fontFamily: "nb-thin" }}>Explore services</button>
                     </div>
                 </div>
