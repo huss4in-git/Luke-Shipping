@@ -6,11 +6,11 @@ const links = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/tic" },
-    { name: "Our Team", path: "/team" },
+    { name: "Our Team", path: "/about" },
     { name: "Tracking", path: "/tracking" },
     { name: "Careers", path: "/career" },
     { name: "Contact Us", path: "/contact" },
-    { name: "Locations", path: "/locations" },
+    { name: "Locations", path: "/" },
 ];
 
 const Footer = () => {
@@ -57,7 +57,7 @@ const Footer = () => {
 
                             <div className="flex gap-4 mt-4 md:mt-5 mb-6 md:mb-7">
                                 <a
-                                    href="#"
+                                    href="https://www.gocomet.com/online-container-tracking/details/d24799e2-c743-4d24-a1fe-cb857d6d8019?shared=true"
                                     className="flex items-center gap-2 bg-[#FD9708] rounded-full px-4 md:px-5 py-3 text-[11px] md:text-[12px] tracking-widest uppercase text-white hover:bg-[#FD9708] transition-colors duration-200" style={{ fontFamily: 'nb-thin' }}
                                 >
                                     Track Shipment

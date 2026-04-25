@@ -1,124 +1,190 @@
-import { useEffect, useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 
-export default function PersonasYTalento() {
-    const sectionRef = useRef(null);
-    const imageRef = useRef(null);
-    const marqueeRef = useRef(null);
+// ─── data ──────────────────────────────────────────────────────────────────
+const SECTION_NUMBER = "01";
+const SECTION_LABEL  = "Why Luke";
 
-    useEffect(() => {
-        let lastScrollY = window.scrollY;
+const HEADLINES = [
+  "We always have big plans and strong goals for both the company and our people.",
+  "We've been around since 2015 and have come a long way in more than 11 years.",
+];
 
-        const handleScroll = () => {
-            if (!sectionRef.current || !imageRef.current || !marqueeRef.current) return;
+const CAPTION_LABEL = "Our vision for a strong future.";
+const CAPTION_BODY  =
+  "Luke stands for independence, tradition and future. As a company, we combine our established corporate culture with a cross-generational orientation. Through targeted investments, we ensure our independence and future viability — for sustainable success and reliable partnerships.";
 
-            const section = sectionRef.current;
-            const rect = section.getBoundingClientRect();
-            const sectionTop = rect.top + window.scrollY;
-            const sectionHeight = section.offsetHeight;
-            const windowH = window.innerHeight;
+// Replace with your actual image URL / import
+const IMAGE_URL =
+  "/about.jpg";
 
-            // Parallax: image slides up as you scroll down
-            const scrollProgress =
-                (window.scrollY - sectionTop + windowH) / (sectionHeight + windowH);
-            const clampedProgress = Math.max(0, Math.min(1, scrollProgress));
-            const parallaxOffset = (clampedProgress - 0.5) * 120; // ±60px range
-            imageRef.current.style.transform = `translateY(${parallaxOffset}px)`;
-
-            // Marquee direction based on scroll direction
-            const currentScrollY = window.scrollY;
-            const direction = currentScrollY > lastScrollY ? -1 : 1;
-            lastScrollY = currentScrollY;
-
-            const marquee = marqueeRef.current;
-            const current = parseFloat(marquee.dataset.offset || "0");
-            const next = current + direction * 1.5;
-            marquee.dataset.offset = next;
-            marquee.style.transform = `translateX(${next % (marquee.scrollWidth / 2)}px)`;
-        };
-
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const marqueeText = "DELIVERING WHAT MATTERS – RELIABLY AND RESPONSIBLY – ";
-
-    return (
-        <section
-            ref={sectionRef}
-            className="relative bg-[white] min-h-screen overflow-hidden"
-        >
-
-            {/* Main content grid */}
-            <div className="max-w-[1400px] mx-auto px-10 pt-24 pb-20 grid grid-cols-2 gap-20 items-start">
-                {/* Left: text content */}
-                <div>
-                    <p className="text-[#FD9708] text-[20px] tracking-widest uppercase mb-8" style={{ fontFamily: 'nb-thin' }}>
-                        About Us
-                    </p>
-
-                    <p
-                        className="text-[13px] text-[#333] leading-[1.7] max-w-[500px] text-left"
-                        style={{ fontFamily: "nb-thin" }}
-                    >
-                        Luke Shipping is a logistics company focused on delivering reliable, efficient, and customer-oriented transport and supply chain solutions in a rapidly evolving global market. With strong industry experience and a growing operational network, we provide tailored services that ensure the smooth and timely movement of goods across regions.
-                    </p>
-
-                    <br />
-                    <p
-                        className="text-[13px] text-[#333] leading-[1.7] max-w-[500px] text-left"
-                        style={{ fontFamily: "nb-thin" }}
-                    >
-                        Alongside our logistics operations, we offer Testing, Inspection, and Certification (TIC) services to support quality assurance, compliance, and safety throughout the supply chain. These services help our clients meet international standards, minimize risks, and maintain consistency in their operations.
-                    </p>
-                    <br />
-                    <p
-                        className="text-[13px] text-[#333] leading-[1.7] max-w-[500px] text-left mb-10"
-                        style={{ fontFamily: "nb-thin" }}
-                    >
-                        Driven by professionalism, reliability, and continuous improvement, Luke Shipping is committed to simplifying logistics and supporting businesses in reaching their goals.       </p>
-
-                    {/* CTA pill button */}
-                    <button className="flex cursor-pointer items-center gap-2 border border-[#FD9708] rounded-full px-4 py-1.5 text-[#FD9708] text-xs tracking-widest uppercase hover:bg-[#FD9708] hover:text-white transition-colors duration-300" style={{ fontFamily: 'nb-thin' }}>
-                        CONTACT US
-                    </button>
-                </div>
-
-                {/* Right: parallax image */}
-                <div className="overflow-hidden h-[400px] w-full">
-                    <img
-                        ref={imageRef}
-                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80"
-                        alt="Team at work"
-                        className="w-full h-[500px] object-cover transition-transform duration-75 ease-out"
-                        style={{ willChange: "transform" }}
-                    />
-                </div>
-            </div>
-
-            {/* Marquee strip */}
-            {/* <div className="mt-16 overflow-hidden border-t border-b border-transparent py-4">
-        <div
-          ref={marqueeRef}
-          data-offset="0"
-          className="flex whitespace-nowrap"
-          style={{ willChange: "transform" }}
-        >
-          {[...Array(6)].map((_, i) => (
-            <span
-              key={i}
-              className="text-[#1a2040] text-5xl font-light tracking-tight mr-0"
-              style={{
-                fontFamily: "'Georgia', serif",
-                WebkitTextStroke: "1px #1a2040",
-                color: "transparent",
-                letterSpacing: "0.02em",
-              }}
-            >
-              {marqueeText}
-            </span>
-          ))}
-        </div>
-      </div> */}
-        </section>
+// ─── helpers ───────────────────────────────────────────────────────────────
+function useFadeIn(threshold = 0.15) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { threshold }
     );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return [ref, visible];
+}
+
+// ─── sub-components ────────────────────────────────────────────────────────
+function SectionBadge({ number, label }) {
+  return (
+    <span className="inline-flex bg-white items-center gap-2 border border-gray-300 rounded-full px-3 py-1 text-xs tracking-widest text-gray-500 font-medium uppercase">
+      <span style={{color:'#fda408'}}>{number}</span> — {label}
+    </span>
+  );
+}
+
+function Watermark({ char }) {
+  return (
+    <span
+      aria-hidden
+      className="
+        absolute right-0 top-[-2rem] select-none pointer-events-none
+        text-[22rem] leading-none font-black tracking-tighter
+        text-transparent
+      "
+      style={{
+        WebkitTextStroke: "1.5px #d1d1d1",
+        opacity: 0.45,
+        fontFamily: "nb-thin",
+      }}
+    >
+      {char}
+    </span>
+  );
+}
+
+function HeadlineBlock({ lines }) {
+  const [ref, visible] = useFadeIn(0.1);
+  return (
+    <div ref={ref} className="space-y-6">
+      {lines.map((line, i) => (
+        <p
+          key={i}
+          className="
+            text-[1.5rem] sm:text-[2.4rem] lg:text-[1.75rem]
+            leading-[1.15] 
+            transition-all duration-700
+          "
+          style={{
+            fontFamily: "nb-thin",
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(28px)",
+            transitionDelay: `${i * 120}ms`,
+          }}
+        >
+          {line}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+function PhotoBlock({ src, alt }) {
+  const [ref, visible] = useFadeIn(0.05);
+  return (
+    <div
+      ref={ref}
+      className="w-full overflow-hidden rounded-sm"
+      style={{
+        transition: "opacity 0.9s ease, transform 0.9s ease",
+        opacity: visible ? 1 : 0,
+        transform: visible ? "scale(1)" : "scale(0.98)",
+      }}
+    >
+      <img
+        src={src}
+        alt={alt}
+        className="w-full object-cover"
+        style={{ maxHeight: "560px" }}
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
+function CaptionRow({ label, body }) {
+  const [ref, visible] = useFadeIn(0.1);
+  return (
+    <div
+      ref={ref}
+      className="
+        pt-10 border-t border-gray-200
+        grid grid-cols-1 lg:grid-cols-2 gap-8 items-start
+      "
+      style={{
+        transition: "opacity 0.7s ease",
+        opacity: visible ? 1 : 0,
+      }}
+    >
+      {/* left — label */}
+      <div className="flex items-center gap-2">
+        <span className="w-2 h-2 rounded-full bg-[#fda408] flex-shrink-0" />
+        <p
+          className="text-sm text-gray-700"
+          style={{ fontFamily: "nb-thin" }}
+        >
+          {label}
+        </p>
+      </div>
+
+      {/* right — body */}
+      <p
+        className="text-sm sm:text-base leading-relaxed text-gray-600"
+        style={{ fontFamily: "nb-thin" }}
+      >
+        {body}
+      </p>
+    </div>
+  );
+}
+
+// ─── main export ───────────────────────────────────────────────────────────
+export default function WhySection() {
+  return (
+    <>
+      {/* Google Font */}
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&display=swap');`}</style>
+
+      <section
+        className="relative bg-[#f3f3f3] px-6 sm:px-12 lg:px-20 py-20 overflow-hidden"
+      >
+        {/* ── top: badge + headlines + watermark ── */}
+        <div className="relative max-w-screen-xl mx-auto">
+          {/* Watermark — absolute, right side */}
+          {/* <Watermark char="L" /> */}
+
+          {/* Badge */}
+          <div className="mb-10">
+            <SectionBadge number={SECTION_NUMBER} label={SECTION_LABEL} />
+          </div>
+
+          {/* Headlines — constrained to ~55% width so watermark shows */}
+          <div className="max-w-[58%] min-w-[320px]">
+            <HeadlineBlock lines={HEADLINES} />
+          </div>
+
+          {/* Spacer */}
+          <div className="mt-14" />
+
+          {/* Photo */}
+          <PhotoBlock src={IMAGE_URL} alt="Container" />
+
+          {/* Caption row */}
+          <div className="mt-10">
+            <CaptionRow label={CAPTION_LABEL} body={CAPTION_BODY} />
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

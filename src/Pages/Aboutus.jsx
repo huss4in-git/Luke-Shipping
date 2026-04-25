@@ -5,6 +5,8 @@ import About from "../Components/About";
 import Footer from "../Components/Footer";
 import Banner from "../Components/Banner";
 import Aboutusfirst from "../Components/Aboutusfirst";
+import Aboutussecond from "../Components/Aboutussecond";
+import Aboutquality from "../Components/Aboutquality";
 
 export default function Aboutus() {
   const [shopOpen, setShopOpen] = useState(false);
@@ -52,7 +54,7 @@ export default function Aboutus() {
         {/* BACKGROUND — add ref and remove transition on transform */}
         <img
           ref={heroImgRef}
-          src="/road.jpg"
+          src="/aboutus2.jpg"
           alt="Road Transport"
           className="absolute inset-0 w-full h-full object-cover origin-top"
           style={{ willChange: "transform" }}
@@ -351,6 +353,8 @@ export default function Aboutus() {
         </div>
       </div>
       <Aboutusfirst />
+      <Aboutussecond />
+      <Aboutquality />
       <Banner />
       <Footer />
 
