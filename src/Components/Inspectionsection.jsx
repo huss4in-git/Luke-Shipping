@@ -167,7 +167,7 @@ export default function Inspectionsection() {
                     </div>
                     <div className="flex-shrink-0">
                         <button
-                            onClick={() => navigate("/contact")}
+                            onClick={() => window.open("https://wa.me/966582780836", "_blank")}
                             className="bg-[#FD9708] text-white text-sm px-6 py-3 rounded-full hover:bg-[black] hover:text-[#FD9708] transition-colors duration-200 cursor-pointer"
                             style={{ fontFamily: "nb-thin" }}
                         >

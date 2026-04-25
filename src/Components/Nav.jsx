@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import QuoteModal from "./QuoteModal";
 
 export default function Navbar() {
   const [serviceOpen, setServiceOpen] = useState(false);
@@ -12,6 +13,8 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const heroImgRef = useRef(null);
+
+  const [quoteOpen, setQuoteOpen] = useState(false);
 
   useEffect(() => {
     let lastScroll = 0;
@@ -237,7 +240,7 @@ export default function Navbar() {
             </p>
 
             <button
-              onClick={() => navigate("/contact")}
+              onClick={() => setQuoteOpen(true)}
               className="bg-[#FD9708] text-[black] cursor-pointer px-10 py-4 text-[13px] rounded-full uppercase tracking-wide hover:bg-[black]  hover:text-[#FD9708] transition"
             >
               Request a Quote
@@ -253,7 +256,7 @@ export default function Navbar() {
             Experience world-class transport of massive industrial loads — safely, globally and on time.
           </p>
           <button
-            onClick={() => navigate("/contact")}
+            onClick={() => setQuoteOpen(true)}
             className="bg-[#FD9708] cursor-pointer text-black px-8 py-4 text-[11px] rounded-full uppercase tracking-wide hover:bg-black hover:text-white transition"
           >
             Request a Quote
@@ -359,6 +362,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      <QuoteModal isOpen={quoteOpen} onClose={() => setQuoteOpen(false)} />
     </>
   );
 }
