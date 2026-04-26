@@ -251,7 +251,7 @@ export default function Navbar() {
 
         {/* MOBILE HERO */}
         <div className="md:hidden absolute left-0 right-0 bottom-50 flex flex-col items-center text-white text-center px-6" style={{ fontFamily: "nb-thin" }}>
-          <h1 className="text-5xl mb-4">Your Cargo, <br /> Our <span style={{ color: '#FD9708' }}>Promise</span></h1>
+          <h1 className="text-4xl mb-4">Your Cargo, <br /> Our Mission <br /> Built On <span style={{ color: '#FD9708' }}>Trust</span></h1>
           <p className="text-sm max-w-[260px] mb-6">
             Experience world-class transport of massive industrial loads — safely, globally and on time.
           </p>
