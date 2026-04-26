@@ -17,9 +17,6 @@ const EMPLOYEES_HEADING = "Our employees —\nour most valuable asset";
 
 const SUB_ROWS = [
     {
-        body: "Our employees —\nour most valuable asset",
-    },
-    {
         dot: "#22c55e", // green
         label: "motivation",
         body: "Behind every transport, every shipment and every success are dedicated employees who achieve outstanding results every day with passion and expertise. We believe in the potential of each individual and support our teams through regular training, innovative work environments, and a culture of respect.",
