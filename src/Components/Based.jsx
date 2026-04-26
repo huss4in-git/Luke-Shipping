@@ -119,8 +119,9 @@ export default function Based() {
                 {/* CTA */}
                 <div className="text-center">
                     <button
+                        style={{fontFamily:'nb-thin'}}
                         onClick={() => window.open("https://wa.me/966582780836", "_blank")}
-                        className="bg-[#FD9708] text-black px-8 py-3 rounded-full cursor-pointer text-sm font-medium hover:bg-black hover:text-white transition"
+                        className="bg-[#FD9708] text-black px-8 py-3 rounded-full cursor-pointer text-[11px] md:text-[13px] hover:bg-black tracking-wide hover:text-[#FD9708] transition"
                     >
                         BOOK SHIPMENT
                     </button>
