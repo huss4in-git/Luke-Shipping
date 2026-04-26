@@ -1,19 +1,17 @@
-
+import { useQuote } from "./QuoteContext";
 export default function Banner() {
-  const buttonActions = [
-    {
-      label: "Shipment tracking",
-      href: "https://www.gocomet.com/online-container-tracking/details/d24799e2-c743-4d24-a1fe-cb857d6d8019?shared=true",
-    },
-    { label: "Request a quote", href: null },
-    {
-      label: "Contact",
-      href: "https://wa.me/966582780836",
-    },
-  ];
 
-  const handleClick = (btn) => {
-    if (btn.href) {
+  const { openQuote } = useQuote();
+
+  const buttonActions = [
+    { label: "Shipment tracking", href: "https://www.gocomet.com/online-container-tracking/details/d24799e2-c743-4d24-a1fe-cb857d6d8019?shared=true" },
+    { label: "Request a quote", href: null, action: openQuote },
+    { label: "Contact", href: "https://wa.me/966582780836" },
+  ];
+const handleClick = (btn) => {
+    if (btn.action) {
+      btn.action();
+    } else if (btn.href) {
       window.open(btn.href, "_blank", "noopener,noreferrer");
     }
   };

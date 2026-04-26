@@ -104,10 +104,10 @@ export default function Testing() {
             >
                 <div className="flex items-center justify-between w-full px-6 md:px-12 h-16">
                     <div onClick={() => { setMobileMenuOpen(false); setTimeout(() => navigate("/"), 1200); }} className="md:hidden flex items-center cursor-pointer">
-                        <img src="/" alt="Logo" className="h-6" />
+                        <img src="/logo.png" alt="Logo" className="h-9" />
                     </div>
                     <div onClick={() => { setMobileMenuOpen(false); setTimeout(() => navigate("/"), 1200); }} className="hidden md:flex items-center cursor-pointer">
-                        <img src="/" alt="" className="h-6" />
+                        <img src="/logo.png" alt="" className="h-10" />
                     </div>
                     <div onClick={() => setMobileMenuOpen(true)} className="cursor-pointer md:hidden uppercase">Menu</div>
                     <div className="hidden md:flex space-x-8 uppercase">

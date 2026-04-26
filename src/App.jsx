@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Nav';
@@ -27,9 +27,11 @@ import Product from './Pages/Product';
 import Technical from './Pages/Technical';
 import Testing from './Pages/Testing';
 import Verification from './Pages/Verification';
-
+import QuoteModal from './Components/QuoteModal';
+import { QuoteProvider } from './Components/QuoteContext';
 
 function Home() {
+  const [quoteOpen, setQuoteOpen] = useState(false);
   return (
     <div className="app-container">
       <Track />
@@ -38,7 +40,7 @@ function Home() {
       <Marquee />
       <Based />
       <Services />
-      <Banner />
+      <Banner/>
       <Footer />
     </div>
   );
@@ -68,8 +70,10 @@ function App() {
   }, []);
 
   return (
+    <QuoteProvider>
     <Router>
       <ScrollToTop />
+      <QuoteModal />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/road" element={<Road />} />
@@ -89,6 +93,7 @@ function App() {
         <Route path='/verification' element={<Verification />} />
       </Routes>
     </Router>
+    </QuoteProvider>
   );
 }
 

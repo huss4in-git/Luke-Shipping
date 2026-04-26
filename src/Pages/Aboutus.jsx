@@ -81,7 +81,7 @@ export default function Aboutus() {
               }}
               className="md:hidden flex items-center cursor-pointer"
             >
-              <img src="/" alt="Logo" className="h-6" />
+              <img src="/logo.png" alt="Logo" className="h-9" />
             </div>
 
             {/* LOGO */}
@@ -92,7 +92,7 @@ export default function Aboutus() {
               }}
               className="hidden md:flex items-center cursor-pointer"
             >
-              <img src="/" alt="" className="h-6" />
+              <img src="/logo.png" alt="" className="h-10" />
             </div>
 
             {/* MOBILE MENU */}
@@ -211,7 +211,7 @@ export default function Aboutus() {
           </h1>
 
           <p className="text-xs opacity-90">
-            <span style={{ color: '#FD9708' }}>Luke Shipping Co.</span> was founded to address a market that is constantly
+            <span style={{ color: '#FD9708' }}>Luke Shipping</span> was founded to address a market that is constantly
             evolving and developing, creating specific transport and logistics
             solutions for every customer. In a multinational environment where
             excellence is a must, we forge relationships of trust and mutual

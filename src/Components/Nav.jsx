@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import QuoteModal from "./QuoteModal";
+import { useQuote } from "./QuoteContext";
 
 export default function Navbar() {
+  const { openQuote } = useQuote();
   const [serviceOpen, setServiceOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [solidNav, setSolidNav] = useState(false);
@@ -14,7 +15,6 @@ export default function Navbar() {
 
   const heroImgRef = useRef(null);
 
-  const [quoteOpen, setQuoteOpen] = useState(false);
 
   useEffect(() => {
     let lastScroll = 0;
@@ -93,9 +93,9 @@ export default function Navbar() {
               className="md:hidden flex items-center cursor-pointer"
             >
               <img
-                src="/"
+                src="/logo.png"
                 alt="Logo"
-                className="h-6"
+                className="h-9"
               />
             </div>
 
@@ -112,9 +112,9 @@ export default function Navbar() {
               className="hidden md:flex items-center cursor-pointer"
             >
               <img
-                src="/"
+                src="/logo.png"
                 alt=""
-                className="h-6"
+                className="h-10"
               />
             </div>
 
@@ -240,7 +240,7 @@ export default function Navbar() {
             </p>
 
             <button
-              onClick={() => setQuoteOpen(true)}
+              onClick={openQuote}
               className="bg-[#FD9708] text-[black] cursor-pointer px-10 py-4 text-[13px] rounded-full uppercase tracking-wide hover:bg-[black]  hover:text-[#FD9708] transition"
             >
               Request a Quote
@@ -256,7 +256,7 @@ export default function Navbar() {
             Experience world-class transport of massive industrial loads — safely, globally and on time.
           </p>
           <button
-            onClick={() => setQuoteOpen(true)}
+            onClick={openQuote}
             className="bg-[#FD9708] cursor-pointer text-black px-8 py-4 text-[11px] rounded-full uppercase tracking-wide hover:bg-black hover:text-white transition"
           >
             Request a Quote
@@ -362,7 +362,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <QuoteModal isOpen={quoteOpen} onClose={() => setQuoteOpen(false)} />
     </>
   );
 }

@@ -83,7 +83,7 @@ export default function Road() {
                             }}
                             className="md:hidden flex items-center cursor-pointer"
                         >
-                            <img src="/" alt="Logo" className="h-6" />
+                            <img src="/logo.png" alt="Logo" className="h-9" />
                         </div>
 
                         {/* LOGO */}
@@ -94,7 +94,7 @@ export default function Road() {
                             }}
                             className="hidden md:flex items-center cursor-pointer"
                         >
-                            <img src="/" alt="" className="h-6" />
+                            <img src="/logo.png" alt="" className="h-10" />
                         </div>
 
                         {/* MOBILE MENU */}

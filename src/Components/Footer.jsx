@@ -103,15 +103,13 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-6 text-center md:text-left">
 
                     {/* Logo */}
-                    <div className="flex items-center gap-3">
-                        <img src="/air1.png" className="h-9 md:h-10" alt="" />
-                        <p className="text-[14px] md:text-[15px] text-gray-900 leading-tight tracking-wide uppercase">
-                            Luke Shipping Co.
-                        </p>
+                    {/* Logo */}
+                    <div className="flex items-center gap-3 md:-ml-10 -ml-6">
+                        <img src="/luke1.png" className="h-25 md:h-25" alt="" />
                     </div>
 
                     {/* Vision */}
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center md:ms-15 items-center">
                         <img
                             src="/vision.svg"
                             alt="Vision 2030"
