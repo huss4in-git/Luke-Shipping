@@ -379,7 +379,7 @@ export default function QuoteModal() {
                                     <label style={labelStyle}>From</label>
                                     <input
                                         type="text"
-                                        placeholder="Origin city / port"
+                                        placeholder="Origin City / Port"
                                         value={form.origin}
                                         onChange={e => handleChange("origin", e.target.value)}
                                         style={{ ...inputStyle, borderColor: errors.origin ? "#f87171" : "#e5e5e5" }}
@@ -392,7 +392,7 @@ export default function QuoteModal() {
                                     <label style={labelStyle}>To</label>
                                     <input
                                         type="text"
-                                        placeholder="Destination city / port"
+                                        placeholder="Destination City / Port"
                                         value={form.destination}
                                         onChange={e => handleChange("destination", e.target.value)}
                                         style={{ ...inputStyle, borderColor: errors.destination ? "#f87171" : "#e5e5e5" }}
