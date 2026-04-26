@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
 import Warehouseinfo from "../Components/Warehouseinfo";
@@ -176,7 +176,11 @@ export default function Road() {
                     <div className="max-w-4xl">
 
                         <p className="text-sm mb-4 opacity-80">
-                            Home / Services / Warehousing & Distribution
+                        <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                                {" / "}
+                                <span>Services</span>
+                                {" / "}
+                                <span>Warehousing & Distribution</span>
                         </p>
 
                         <h1 className="text-6xl md:text-6xl">
@@ -194,7 +198,11 @@ export default function Road() {
                 <div className="md:hidden absolute bottom-28 left-0 right-0 px-6 text-white" style={{fontFamily:'nb-thin'}}>
 
                     <p className="text-[11px] mb-3 opacity-80">
-                        Home / Services / Warehousing
+                    <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                                {" / "}
+                                <span>Services</span>
+                                {" / "}
+                                <span>Warehousing</span>
                     </p>
 
                     <h1 className="text-3xl leading-tight mb-4">

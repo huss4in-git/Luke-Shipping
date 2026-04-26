@@ -4,6 +4,7 @@ import { UserCheck, ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, 
 import Footer from "../Components/Footer";
 import Banner from "../Components/Banner";
 import Inspectionsection from "../Components/Inspectionsection";
+import { Link } from 'react-router-dom';
 import Managementsection from "../Components/Managementsection";
 
 export default function Management() {
@@ -195,7 +196,13 @@ export default function Management() {
                 <div className="hidden md:flex absolute inset-0 items-end pb-20 px-16 text-white">
                     <div className="flex items-end justify-between w-full">
                         <div className="max-w-2xl">
-                            <p className="text-sm mb-4 opacity-60">Home / Services / Management System Certification</p>
+                        <p className="text-sm mb-4 opacity-60">
+                                <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                                {" / "}
+                                <Link to="/tic" className="hover:text-[#FD9708] transition-colors">Services</Link>
+                                {" / "}
+                                <span>Management System Certification</span>
+                            </p>
                             <h1 className="text-5xl leading-tight">Management System Certification</h1>
                             <p className="mt-4 max-w-xl text-sm opacity-75">
                             Ensure compliance of your value chain against international management system standards to demonstrate your commitment to quality, performance and security.
@@ -217,7 +224,13 @@ export default function Management() {
 
                 {/* MOBILE */}
                 <div className="md:hidden absolute bottom-12 left-0 right-0 px-6 text-white">
-                    <p className="text-[11px] mb-3 opacity-60">Home / Services / Management System Certification</p>
+                <p className="text-[11px] mb-3 opacity-60">
+                                <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                                {" / "}
+                                <Link to="/tic" className="hover:text-[#FD9708] transition-colors">Services</Link>
+                                {" / "}
+                                <span>Management System Certification</span>
+                            </p>
                     <h1 className="text-3xl leading-tight mb-3">Management System Certification</h1>
                     <p className="text-xs opacity-70 mb-5">Ensure compliance of your value chain against international management system standards to demonstrate your commitment to quality, performance and security.</p>
                     <div className="flex gap-3">

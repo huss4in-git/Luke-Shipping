@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import Banner from "../Components/Banner";
 import Inspectionsection from "../Components/Inspectionsection";
 import Inspectionsecond from "../Components/Inspectionsecond";
+import { Link } from 'react-router-dom';
 
 export default function Inspection() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -195,7 +196,13 @@ export default function Inspection() {
                 <div className="hidden md:flex absolute inset-0 items-end pb-24 px-16 text-white">
                     <div className="flex items-end justify-between w-full">
                         <div className="max-w-2xl">
-                            <p className="text-sm mb-4 opacity-60">Home / Services / Inspection</p>
+                        <p className="text-sm mb-4 opacity-60">
+                                <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                                {" / "}
+                                <Link to="/tic" className="hover:text-[#FD9708] transition-colors">Services</Link>
+                                {" / "}
+                                <span>Inspection</span>
+                            </p>
                             <h1 className="text-6xl leading-tight">Inspection</h1>
                             <p className="mt-4 max-w-xl text-sm opacity-75">
                                 Our expert assessments help organisations improve operations, reduce risks, and maintain a competitive edge amidst industrial and regulatory challenges.
@@ -217,7 +224,13 @@ export default function Inspection() {
 
                 {/* MOBILE */}
                 <div className="md:hidden absolute bottom-12 left-0 right-0 px-6 text-white">
-                    <p className="text-[11px] mb-3 opacity-60">Home / Services / Inspection</p>
+                <p className="text-[11px] mb-3 opacity-60">
+                                <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                                {" / "}
+                                <Link to="/tic" className="hover:text-[#FD9708] transition-colors">Services</Link>
+                                {" / "}
+                                <span>Auditing</span>
+                            </p>
                     <h1 className="text-3xl leading-tight mb-3">Inspection</h1>
                     <p className="text-xs opacity-70 mb-5">Expert assessments to reduce risks and meet regulatory requirements.</p>
                     <div className="flex gap-3">

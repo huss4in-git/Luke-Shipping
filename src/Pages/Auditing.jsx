@@ -5,6 +5,7 @@ import Auditingsection from "../Components/Auditingsection";
 import Footer from "../Components/Footer";
 import Auditingsecond from "../Components/Auditingsecond";
 import Banner from "../Components/Banner";
+import { Link } from 'react-router-dom';
 
 export default function Auditing() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -98,9 +99,8 @@ export default function Auditing() {
         <>
             {/* ── NAVBAR ─────────────────────────────────────────── */}
             <nav
-                className={`fixed top-0 left-0 w-full z-[999] text-[12px] transition-all duration-500 transform ${
-                    navVisible ? "translate-y-0" : "-translate-y-full"
-                } ${solidNav ? "bg-white text-black" : "bg-transparent text-white"}`}
+                className={`fixed top-0 left-0 w-full z-[999] text-[12px] transition-all duration-500 transform ${navVisible ? "translate-y-0" : "-translate-y-full"
+                    } ${solidNav ? "bg-white text-black" : "bg-transparent text-white"}`}
                 style={{ fontFamily: "nb-thin" }}
             >
                 <div className="flex items-center justify-between w-full px-6 md:px-12 h-16">
@@ -195,7 +195,13 @@ export default function Auditing() {
                 <div className="hidden md:flex absolute inset-0 items-end pb-24 px-16 text-white">
                     <div className="flex items-end justify-between w-full">
                         <div className="max-w-2xl">
-                            <p className="text-sm mb-4 opacity-60">Home / Services / Auditing</p>
+                            <p className="text-sm mb-4 opacity-60">
+                                <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                                {" / "}
+                                <Link to="/tic" className="hover:text-[#FD9708] transition-colors">Services</Link>
+                                {" / "}
+                                <span>Auditing</span>
+                            </p>
                             <h1 className="text-6xl leading-tight">Auditing</h1>
                             <p className="mt-4 max-w-xl text-sm opacity-75">
                                 Our expert assessments help organisations improve operations, reduce risks, and maintain a competitive edge amidst industrial and regulatory challenges.
@@ -217,17 +223,23 @@ export default function Auditing() {
 
                 {/* MOBILE */}
                 <div className="md:hidden absolute bottom-12 left-0 right-0 px-6 text-white">
-                    <p className="text-[11px] mb-3 opacity-60">Home / Services / Auditing</p>
+                    <p className="text-[11px] mb-3 opacity-60">
+                        <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                        {" / "}
+                        <Link to="/tic" className="hover:text-[#FD9708] transition-colors">Services</Link>
+                        {" / "}
+                        <span>Auditing</span>
+                    </p>
                     <h1 className="text-3xl leading-tight mb-3">Auditing</h1>
                     <p className="text-xs opacity-70 mb-5">Expert assessments to reduce risks and meet regulatory requirements.</p>
                     <div className="flex gap-3">
-                    <button onClick={() => window.open("https://wa.me/966582780836", "_blank")} className="bg-[#FD9708] text-[white] text-xs px-5 py-2 rounded-full cursor-pointer" style={{ fontFamily: "nb-thin" }}>Contact Us</button>
+                        <button onClick={() => window.open("https://wa.me/966582780836", "_blank")} className="bg-[#FD9708] text-[white] text-xs px-5 py-2 rounded-full cursor-pointer" style={{ fontFamily: "nb-thin" }}>Contact Us</button>
                         <button onClick={() => navigate("/services")} className="border border-[#FD9708] text-white text-xs px-5 py-2 rounded-full cursor-pointer" style={{ fontFamily: "nb-thin" }}>Explore services</button>
                     </div>
                 </div>
             </section>
             <Auditingsection />
-        
+
             <Banner />
             <Footer />
         </>

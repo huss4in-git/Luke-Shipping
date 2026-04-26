@@ -188,6 +188,11 @@ export default function Services() {
 
                 {/* ================= TIC FEATURE STRIP ================= */}
                 <div className="hidden md:block md:px-7 mt-10">
+                    <div className="relative flex items-center mb-10">
+                        <div className="w-[3px] h-[3px] bg-gray-300 rounded-full flex-shrink-0"></div>
+                        <div className="flex-1 h-[0.5px] bg-gray-300"></div>
+                        <div className="w-[3px] h-[3px] bg-gray-300 rounded-full flex-shrink-0"></div>
+                    </div>
                     <div
                         onClick={() => navigate("/tic")}
                         className="bg-[#f3f3f3] rounded-[3px] overflow-hidden group cursor-pointer relative"

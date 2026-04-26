@@ -4,6 +4,7 @@ import { UserCheck, ClipboardCheck, TrendingUp, ShieldAlert, Clock, FileSearch, 
 import Footer from "../Components/Footer";
 import Banner from "../Components/Banner";
 import Verificationsection from "../Components/Verificationsection";
+import { Link } from 'react-router-dom';
 
 export default function Verification() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -194,7 +195,13 @@ export default function Verification() {
                 <div className="hidden md:flex absolute inset-0 items-end pb-24 px-16 text-white">
                     <div className="flex items-end justify-between w-full">
                         <div className="max-w-2xl">
-                            <p className="text-sm mb-4 opacity-60">Home / Services / Verification & Validation</p>
+                        <p className="text-sm mb-4 opacity-60">
+                                <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                                {" / "}
+                                <Link to="/tic" className="hover:text-[#FD9708] transition-colors">Services</Link>
+                                {" / "}
+                                <span>Verification & Validation</span>
+                            </p>
                             <h1 className="text-6xl leading-tight">Verification & Validation</h1>
                             <p className="mt-4 max-w-xl text-sm opacity-75">
                             Ensure the accuracy and transparency of your safety, quality and sustainability claims through our independent validation and verification services.
@@ -216,7 +223,13 @@ export default function Verification() {
 
                 {/* MOBILE */}
                 <div className="md:hidden absolute bottom-12 left-0 right-0 px-6 text-white">
-                    <p className="text-[11px] mb-3 opacity-60">Home / Services / Verification & Validation</p>
+                <p className="text-[11px] mb-3 opacity-60">
+                                <Link to="/" className="hover:text-[#FD9708] transition-colors">Home</Link>
+                                {" / "}
+                                <Link to="/tic" className="hover:text-[#FD9708] transition-colors">Services</Link>
+                                {" / "}
+                                <span>Verification & Validation</span>
+                            </p>
                     <h1 className="text-3xl leading-tight mb-3">Verification & Validation</h1>
                     <p className="text-xs opacity-70 mb-5">Ensure the accuracy and transparency of your safety, quality and sustainability claims through our independent validation and verification services.</p>
                     <div className="flex gap-3">
