@@ -46,11 +46,11 @@ export default function Based() {
     }, [isDesktop]);
 
     const features = [
-        { text: "24/7 SHIPMENT TRACKING", icon: "/tracking.svg" },
-        { text: "EXTENSIVE NETWORK ACROSS GCC", icon: "network.svg" },
-        { text: "CUSTOMS EXPERTISE", icon: "customs.svg" },
-        { text: "TIMELY DELIVERY GUARANTEE", icon: "delivery.svg" },
-        { text: "COMPETITIVE PRICING", icon: "pricing.svg" },
+        { text: "24/7 Shipment Tracking", icon: "/tracking.svg" },
+        { text: "Extensive Network Across GCC", icon: "network.svg" },
+        { text: "Customs Expertise", icon: "customs.svg" },
+        { text: "Timely Delivery Guarantee", icon: "delivery.svg" },
+        { text: "Competitive Pricing", icon: "pricing.svg" },
     ];
 
     return (
