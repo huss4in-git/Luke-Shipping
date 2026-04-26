@@ -352,7 +352,7 @@ export default function QuoteModal({ isOpen, onClose }) {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
             <div>
               <p style={{ color: "#FD9708", fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 4px" }}>
-                Time International Logistics
+                Luke Shipping Company
               </p>
               <h2 style={{ fontSize: "17px", fontWeight: 500, margin: 0, color: "#111" }}>
                 {STEP_TITLES[step - 1]}
