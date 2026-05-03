@@ -87,11 +87,11 @@ const Footer = () => {
                         <div className="space-y-2 md:space-y-3 text-[13px] md:text-[14px] text-gray-700">
                             <p className="font-medium">+966 58 278 0836</p>
                             <p>info@lukeshipping.com</p>
-                            {/* <p className="leading-[1.6] md:leading-[1.7]">
-                                Building # 6960 Ismail IBN Katheer<br />
-                                Dist - Al Basatin - 5201 Jeddah : 23719<br />
-                                Saudi Arabia
-                            </p> */}
+                            <p className="leading-[1.6] md:leading-[1.7]">
+                            4464, King Saud Road, 7065,<br />
+                            Al Mazruiyah Dist<br />
+                            Dammam, Saudi Arabia
+                            </p>
                         </div>
                     </div>
 
@@ -119,7 +119,7 @@ const Footer = () => {
 
                     {/* CR */}
                     <div className="text-[11px] md:text-[12px] text-gray-500">
-                        <p>CR :- 0000000000 | VAT :- 000000000000000
+                        <p>CR :- 7051962871 | VAT :- 314285892800003
                         </p>
                     </div>
 
