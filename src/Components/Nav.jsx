@@ -231,9 +231,11 @@ export default function Navbar() {
         >
           <div className="max-w-4xl">
 
-            <h1 className="text-6xl md:text-7xl mb-4 leading-tight">
-            <span style={{ color: '#FD9708' }}>Luke</span> Shipping Company
-            </h1>
+          <img
+  src="/logo1.png"
+  alt="Luke Shipping Company"
+  className="mx-auto mb-6 w-[220px] md:w-[300px]"
+/>
 
             <h3 className="text-3xl md:text-3xl mb-6 leading-tight">
             Your cargo, our mission built on trust
@@ -255,7 +257,11 @@ export default function Navbar() {
 
         {/* MOBILE HERO */}
         <div className="md:hidden absolute left-0 right-0 bottom-55 flex flex-col items-center text-white text-center px-6" style={{ fontFamily: "nb-thin" }}>
-          <h1 className="text-4xl mb-4"><span style={{ color: '#FD9708' }}>Luke</span> Shipping Company</h1>
+        <img
+  src="/logo1.png"
+  alt="Luke Shipping Company"
+  className="mb-4 w-[170px]"
+/>
           <p className="text-sm max-w-[260px] mb-6">
             Experience world-class transport of massive industrial loads — safely, globally and on time.
           </p>
