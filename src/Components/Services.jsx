@@ -151,7 +151,7 @@ export default function Services() {
                             
                                 navigate(routes[item.title]);
                             }}
-                            className="group relative bg-[#f3f3f3] rounded-[3px] h-[260px] overflow-hidden cursor-pointer"
+                            className="group relative bg-[#f3f3f3] rounded-[3px] h-[280px] overflow-hidden cursor-pointer"
                         >
                             {/* IMAGE */}
                             <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -170,7 +170,7 @@ export default function Services() {
 
                                 <div className="h-[0.5px] w-full bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
 
-                                <div className="p-5 flex items-center justify-between text-sm">
+                                <div className="p-5 flex items-center justify-between text-[15px]">
                                     <span className="text-black group-hover:text-white transition">
                                         {item.title}
                                     </span>
@@ -201,7 +201,7 @@ export default function Services() {
                         {/* HOVER OVERLAY (MUST BE HERE) */}
                         <div className="absolute inset-0 bg-[#FD9708] opacity-0 group-hover:opacity-100 transition duration-500 z-10"></div>
 
-                        <div className="grid md:grid-cols-3 h-[220px] relative z-20">
+                        <div className="grid md:grid-cols-3 h-[240px] relative z-20">
 
                             {/* COL 1 */}
                             <div className="flex items-center justify-center">
@@ -211,11 +211,11 @@ export default function Services() {
 
                             {/* COL 3 */}
                             <div className="flex flex-col justify-center px-6 md:px-5">
-                                <h2 className="text-sm tracking-wide transition group-hover:text-white" style={{ fontFamily: 'nb-thin' }}>
+                                <h2 className="text-[15px] tracking-wide transition group-hover:text-white" style={{ fontFamily: 'nb-thin' }}>
                                     TIC Services
                                 </h2>
 
-                                <p className="text-sm opacity-70 mt-2 transition group-hover:text-white" style={{ fontFamily: 'nb-thin' }}>
+                                <p className="text-[15px] opacity-70 mt-2 transition group-hover:text-white" style={{ fontFamily: 'nb-thin' }}>
                                     Testing • Inspection • Certification
                                 </p>
                             </div>

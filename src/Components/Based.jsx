@@ -63,7 +63,7 @@ export default function Based() {
                         Why Luke Shipping?
                     </h2>
 
-                    <p className="text-black/60 max-w-3xl mx-auto text-[15px] leading-relaxed">
+                    <p className="text-black/60 max-w-3xl mx-auto text-[16px] leading-relaxed">
                         <span style={{ color: '#FD9708' }}>Luke Shipping</span> is dedicated to providing exceptional logistics services. <br />
                         We employ a PDCA (Plan-Do-Check-Act) cycle to continuously improve our processes.
                     </p>
@@ -107,7 +107,7 @@ export default function Based() {
                                     className="bg-[#f3f3f3] rounded-[3px] p-10 text-center"
                                 >
                                     <img src={item.icon} className="w-25 h-25 mx-auto mb-5" />
-                                    <p className="text-sm tracking-wide" style={{ fontFamily: 'nb-thin' }}>
+                                    <p className="text-[15px] tracking-wide" style={{ fontFamily: 'nb-thin' }}>
                                         {item.text}
                                     </p>
                                 </div>

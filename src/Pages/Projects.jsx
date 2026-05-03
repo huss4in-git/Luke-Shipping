@@ -161,9 +161,9 @@ export default function Road() {
                             <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 About Us
                             </span>
-                            <span onClick={() => navigate("/contact")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
+                            {/* <span onClick={() => navigate("/contact")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 Careers
-                            </span>
+                            </span> */}
                             <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">
                                 Our Team
                             </span>
@@ -293,10 +293,10 @@ export default function Road() {
             <span>→</span>
           </div>
 
-          <div className="flex justify-between">
+          {/* <div className="flex justify-between">
             <span>Careers</span>
             <span>→</span>
-          </div>
+          </div> */}
 
           <div className="flex justify-between">
             <span>Our Team</span>

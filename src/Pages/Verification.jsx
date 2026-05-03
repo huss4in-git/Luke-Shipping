@@ -137,7 +137,7 @@ export default function Verification() {
                             </div>
                         </div>
                         <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">About Us</span>
-                        <span onClick={() => navigate("/contact")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">Careers</span>
+                        {/* <span onClick={() => navigate("/contact")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">Careers</span> */}
                         <span onClick={() => navigate("/about")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">Our Team</span>
                         <span onClick={() => navigate("/")} className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">Contact Us</span>
                     </div>
@@ -161,7 +161,7 @@ export default function Verification() {
                         <div className="w-1/2 px-6 pt-12">
                             <div className="space-y-2 text-[24px]">
                                 <div onClick={() => setActiveMenu("services")} className="flex justify-between cursor-pointer"><span>Services</span><span>→</span></div>
-                                <div className="flex justify-between"><span>Careers</span><span>→</span></div>
+                                {/* <div className="flex justify-between"><span>Careers</span><span>→</span></div> */}
                                 <div className="flex justify-between"><span>Our Team</span><span>→</span></div>
                                 <div onClick={() => { setMobileMenuOpen(false); setActiveMenu("main"); setTimeout(() => navigate("/about"), 300); }} className="flex justify-between cursor-pointer"><span>About us</span><span>→</span></div>
                             </div>

@@ -192,19 +192,19 @@ export default function Navbar() {
                 About Us
               </span>
 
-              <span
+              {/* <span
                 onClick={() => {
                   setMobileMenuOpen(false);
                   setServiceOpen(false);
 
                   setTimeout(() => {
-                    navigate("/contact");
+                    navigate("/careers");
                   }, 500);
                 }}
                 className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]"
               >
                 Careers
-              </span>
+              </span> */}
               <span
                 onClick={() => {
                   setMobileMenuOpen(false);
@@ -229,11 +229,15 @@ export default function Navbar() {
           className="hidden md:flex absolute inset-0 items-center justify-center text-center text-white px-6"
           style={{ fontFamily: "nb-thin" }}
         >
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
 
-            <h1 className="text-6xl md:text-7xl mb-6 leading-tight">
-              Your Cargo, Our Mission <br /> Built On <span style={{ color: '#FD9708' }}>Trust</span>
+            <h1 className="text-6xl md:text-7xl mb-4 leading-tight">
+            <span style={{ color: '#FD9708' }}>Luke</span> Shipping Company
             </h1>
+
+            <h3 className="text-3xl md:text-3xl mb-6 leading-tight">
+            Your cargo, our mission built on trust
+            </h3>
 
             <p className="text-lg max-w-xl mx-auto mb-8">
               Experience world-class transport of massive industrial loads — safely, globally and on time.
@@ -251,7 +255,7 @@ export default function Navbar() {
 
         {/* MOBILE HERO */}
         <div className="md:hidden absolute left-0 right-0 bottom-55 flex flex-col items-center text-white text-center px-6" style={{ fontFamily: "nb-thin" }}>
-          <h1 className="text-4xl mb-4">Your Cargo, <br /> Our Mission <br /> Built On <span style={{ color: '#FD9708' }}>Trust</span></h1>
+          <h1 className="text-4xl mb-4"><span style={{ color: '#FD9708' }}>Luke</span> Shipping Company</h1>
           <p className="text-sm max-w-[260px] mb-6">
             Experience world-class transport of massive industrial loads — safely, globally and on time.
           </p>

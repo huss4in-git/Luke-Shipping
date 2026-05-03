@@ -69,7 +69,7 @@ const Footer = () => {
                                     <Link
                                         key={i}
                                         to={item.path}
-                                        className="text-[13px] text-gray-700 hover:text-[#FD9708] duration-300 font-medium whitespace-nowrap"
+                                        className="text-[14px] text-gray-700 hover:text-[#FD9708] duration-300 font-medium whitespace-nowrap"
                                     >
                                         {item.name}
                                     </Link>
@@ -86,7 +86,7 @@ const Footer = () => {
 
                         <div className="space-y-2 md:space-y-3 text-[13px] md:text-[14px] text-gray-700">
                             <p className="font-medium">+966 58 278 0836</p>
-                            <p>info@lukeshipping.com.sa</p>
+                            <p>info@lukeshipping.com</p>
                             {/* <p className="leading-[1.6] md:leading-[1.7]">
                                 Building # 6960 Ismail IBN Katheer<br />
                                 Dist - Al Basatin - 5201 Jeddah : 23719<br />
