@@ -55,14 +55,14 @@ export default function About() {
                     <div style={{ fontFamily: "nb-thin" }}>
                         <p
                             ref={(el) => (itemsRef.current[1] = el)}
-                            className="text-[18px] text-black font-medium mb-3"
+                            className="text-[15px] md:text-[16px] text-black font-medium mb-3"
                         >
                             Fast, effective, and safe logistics solutions
                         </p>
 
                         <p
                             ref={(el) => (itemsRef.current[2] = el)}
-                            className="text-[16px] text-black/50 leading-relaxed max-w-[520px]"
+                            className="text-[15px] md:text-[16px] text-black/50 leading-relaxed max-w-[520px]"
                         >
                             <span style={{ color: '#FD9708' }}>Luke Shipping Company</span> is a seasoned logistics provider with a rich history
                             spanning 11 years. Our unwavering commitment to excellence has positioned us as a
