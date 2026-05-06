@@ -88,7 +88,7 @@ const Footer = () => {
                             <p className="font-medium">+966 58 278 0836</p>
                             <p>info@lukeshipping.com</p>
                             <p className="leading-[1.6] md:leading-[1.7]">
-                            4464, King Saud Road, 7065,<br />
+                            4464, King Saudi Road, 7065,<br />
                             Al Mazruiyah Dist<br />
                             Dammam, Saudi Arabia
                             </p>
