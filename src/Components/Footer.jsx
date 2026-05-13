@@ -7,9 +7,17 @@ const links = [
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/tic" },
     { name: "Our Team", path: "/about" },
-    { name: "Tracking", path: "/tracking" },
-    { name: "Careers", path: "/career" },
-    { name: "Contact Us", path: "/contact" },
+    { 
+        name: "Tracking", 
+        path: "https://www.gocomet.com/online-container-tracking/details/d24799e2-c743-4d24-a1fe-cb857d6d8019?shared=true",
+        external: true
+      },
+    { name: "Careers" },
+    { 
+        name: "Contact Us", 
+        path: "https://wa.me/966582780836",
+        external: true
+      },
     { name: "Locations", path: "/" },
 ];
 

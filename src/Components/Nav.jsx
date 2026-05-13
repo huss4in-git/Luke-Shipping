@@ -218,7 +218,8 @@ export default function Navbar() {
               >
                 Our Team
               </span>
-              <span className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]">Contact Us</span>
+              <span className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]"
+              onClick={() => window.open("https://wa.me/966582780836", "_blank")}>Contact Us</span>
             </div>
 
           </div>
@@ -296,7 +297,8 @@ export default function Navbar() {
           {/* REMOVED TEXT */}
           <span className="tracking-widest text-lg"></span>
 
-          <span className="text-[12px]">CONTACT</span>
+          <span className="text-[12px] cursor-pointer"
+          onClick={() => window.open("https://wa.me/966582780836", "_blank")}>CONTACT</span>
         </div>
 
         <div className="relative overflow-hidden h-full">
