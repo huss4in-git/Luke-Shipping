@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import Banner from "../Components/Banner";
 import { Link } from 'react-router-dom';
 import Technicalsection from "../Components/Technicalsection";
+import SEO from "../Components/SEO";
 
 export default function Technical() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -96,6 +97,12 @@ export default function Technical() {
 
     return (
         <>
+       <SEO
+  title="Technical Advisory Services Saudi Arabia | Luke Shipping TIC"
+  description="Professional technical advisory and industrial consultancy services across Saudi Arabia and GCC."
+  keywords="technical advisory services Saudi Arabia, industrial consultancy GCC, technical compliance consulting, engineering advisory services"
+  url="https://lukeshipping.com/technical"
+/>
             {/* ── NAVBAR ─────────────────────────────────────────── */}
             <nav
                 className={`fixed top-0 left-0 w-full z-[999] text-[12px] transition-all duration-500 transform ${

@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import Warehouseinfo from "../Components/Warehouseinfo";
 import Wfaq from "../Components/Wfaq";
 import Banner from "../Components/Banner";
+import SEO from "../Components/SEO";
 
 export default function Road() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -46,6 +47,12 @@ export default function Road() {
 
     return (
         <>
+        <SEO
+  title="Warehousing & Distribution Services Saudi Arabia | Luke Shipping"
+  description="Secure warehousing, storage, and distribution solutions for businesses across Saudi Arabia and GCC."
+  keywords="warehousing Saudi Arabia, distribution services GCC, storage solutions Dammam, logistics warehouse, supply chain distribution"
+  url="https://lukeshipping.com/warehousing"
+/>
             {/* HERO SECTION */}
             <section className="h-screen relative overflow-hidden">
 

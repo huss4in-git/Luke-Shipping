@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import Banner from "../Components/Banner";
 import Testingsection from "../Components/Testingsection";
 import { Link } from 'react-router-dom';
+import SEO from "../Components/SEO";
 
 export default function Testing() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -96,6 +97,12 @@ export default function Testing() {
 
     return (
         <>
+        <SEO
+  title="Testing & Certification Services GCC | Luke Shipping TIC"
+  description="Professional testing and certification solutions for industrial and commercial sectors."
+  keywords="testing services GCC, certification Saudi Arabia, industrial testing solutions"
+  url="https://lukeshipping.com/testing"
+/>
             {/* ── NAVBAR ─────────────────────────────────────────── */}
             <nav
                 className={`fixed top-0 left-0 w-full z-[999] text-[12px] transition-all duration-500 transform ${

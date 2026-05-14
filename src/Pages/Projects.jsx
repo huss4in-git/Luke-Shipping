@@ -9,6 +9,7 @@ import Projectfaq from "../Components/Projectfaq";
 import Projectfeatures from "../Components/Projectfeatures";
 import Banner from "../Components/Banner";
 import { Link } from 'react-router-dom';
+import SEO from "../Components/SEO";
 
 export default function Road() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -50,6 +51,12 @@ export default function Road() {
 
     return (
         <>
+        <SEO
+  title="Project Cargo Handling Services Saudi Arabia | Luke Shipping"
+  description="Specialized project cargo handling and heavy equipment transportation solutions across Saudi Arabia and GCC."
+  keywords="project cargo handling Saudi Arabia, heavy equipment transport GCC, industrial cargo logistics, oversized cargo transportation, project handling services"
+  url="https://lukeshipping.com/projects"
+/>
             {/* HERO SECTION */}
             <section className="h-screen relative overflow-hidden">
 

@@ -6,6 +6,7 @@ import Footer from "../Components/Footer";
 import Auditingsecond from "../Components/Auditingsecond";
 import Banner from "../Components/Banner";
 import { Link } from 'react-router-dom';
+import SEO from "../Components/SEO";
 
 export default function Auditing() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -97,6 +98,12 @@ export default function Auditing() {
 
     return (
         <>
+        <SEO
+  title="Industrial Auditing Services Saudi Arabia | Luke Shipping TIC"
+  description="Professional industrial auditing and compliance services across Saudi Arabia and GCC."
+  keywords="industrial auditing Saudi Arabia, compliance auditing GCC, quality auditing services"
+  url="https://lukeshipping.com/auditing"
+/>
             {/* ── NAVBAR ─────────────────────────────────────────── */}
             <nav
                 className={`fixed top-0 left-0 w-full z-[999] text-[12px] transition-all duration-500 transform ${navVisible ? "translate-y-0" : "-translate-y-full"

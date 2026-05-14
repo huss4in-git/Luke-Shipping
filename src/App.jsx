@@ -29,6 +29,7 @@ import Testing from './Pages/Testing';
 import Verification from './Pages/Verification';
 import QuoteModal from './Components/QuoteModal';
 import { QuoteProvider } from './Components/QuoteContext';
+import SEO from "./Components/SEO";
 
 function Home() {
   const [quoteOpen, setQuoteOpen] = useState(false);

@@ -6,6 +6,7 @@ import Banner from "../Components/Banner";
 import Inspectionsection from "../Components/Inspectionsection";
 import { Link } from 'react-router-dom';
 import Managementsection from "../Components/Managementsection";
+import SEO from "../Components/SEO";
 
 export default function Management() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -97,6 +98,12 @@ export default function Management() {
 
     return (
         <>
+        <SEO
+  title="Management System Certification GCC | Luke Shipping TIC"
+  description="Management system auditing and certification services for quality, safety, and operational compliance."
+  keywords="management system certification GCC, ISO compliance Saudi Arabia, operational auditing services"
+  url="https://lukeshipping.com/management"
+/>
             {/* ── NAVBAR ─────────────────────────────────────────── */}
             <nav
                 className={`fixed top-0 left-0 w-full z-[999] text-[12px] transition-all duration-500 transform ${

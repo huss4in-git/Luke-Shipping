@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import Banner from "../Components/Banner";
 import Verificationsection from "../Components/Verificationsection";
 import { Link } from 'react-router-dom';
+import SEO from "../Components/SEO";
 
 export default function Verification() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -96,6 +97,12 @@ export default function Verification() {
 
     return (
         <>
+        <SEO
+  title="Verification Services Saudi Arabia | Luke Shipping TIC"
+  description="Trusted verification and compliance solutions for industrial operations across GCC."
+  keywords="verification services Saudi Arabia, compliance verification GCC, industrial verification"
+  url="https://lukeshipping.com/verification"
+/>
             {/* ── NAVBAR ─────────────────────────────────────────── */}
             <nav
                 className={`fixed top-0 left-0 w-full z-[999] text-[12px] transition-all duration-500 transform ${

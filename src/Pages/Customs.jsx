@@ -6,6 +6,7 @@ import Customsinfo from "../Components/Customsinfo";
 import Banner from "../Components/Banner";
 import Customsfeatures from "../Components/Customsfeatures";
 import Customsfaq from "../Components/Customsfaq";
+import SEO from "../Components/SEO";
 
 export default function Road() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -47,6 +48,12 @@ export default function Road() {
 
     return (
         <>
+        <SEO
+  title="Customs Clearance Services Saudi Arabia | Luke Shipping"
+  description="Fast and reliable customs clearance and import-export documentation services across Saudi Arabia and GCC."
+  keywords="customs clearance Saudi Arabia, import export clearance GCC, customs brokerage Dammam, cargo clearance services"
+  url="https://lukeshipping.com/customs"
+/>
             {/* HERO SECTION */}
             <section className="h-screen relative overflow-hidden">
 

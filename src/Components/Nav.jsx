@@ -62,7 +62,7 @@ export default function Navbar() {
         <img
           ref={heroImgRef}
           src="/shipping.jpg"
-          alt="Heavy Industry Transport"
+          alt="Industrial cargo transportation services in Saudi Arabia"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ willChange: "transform" }}
         />
@@ -94,7 +94,7 @@ export default function Navbar() {
             >
               <img
                 src="/logo.png"
-                alt="Logo"
+                alt="Luke Shipping logistics company logo"
                 className="h-9"
               />
             </div>
@@ -113,7 +113,7 @@ export default function Navbar() {
             >
               <img
                 src="/logo.png"
-                alt=""
+                alt="Luke Shipping logistics company logo"
                 className="h-10"
               />
             </div>
@@ -219,7 +219,7 @@ export default function Navbar() {
                 Our Team
               </span>
               <span className="cursor-pointer transition-all duration-300 ease-in-out hover:text-[#FD9708]"
-              onClick={() => window.open("https://wa.me/966582780836", "_blank")}>Contact Us</span>
+                onClick={() => window.open("https://wa.me/966582780836", "_blank")}>Contact Us</span>
             </div>
 
           </div>
@@ -232,14 +232,14 @@ export default function Navbar() {
         >
           <div className="max-w-4xl">
 
-          <img
-  src="/logo1.png"
-  alt="Luke Shipping Company"
-  className="mx-auto mb-6 w-[220px] md:w-[300px]"
-/>
+            <img
+              src="/logo1.png"
+              alt="Luke Shipping logistics company logo"
+              className="mx-auto mb-6 w-[220px] md:w-[300px]"
+            />
 
             <h3 className="text-3xl md:text-3xl mb-6 leading-tight">
-            Your cargo, our mission built on trust
+              Your cargo, our mission built on trust
             </h3>
 
             <p className="text-lg max-w-xl mx-auto mb-8">
@@ -258,11 +258,11 @@ export default function Navbar() {
 
         {/* MOBILE HERO */}
         <div className="md:hidden absolute left-0 right-0 bottom-55 flex flex-col items-center text-white text-center px-6" style={{ fontFamily: "nb-thin" }}>
-        <img
-  src="/logo1.png"
-  alt="Luke Shipping Company"
-  className="mb-4 w-[170px]"
-/>
+          <img
+            src="/logo1.png"
+            alt="Luke Shipping logistics company logo"
+            className="mb-4 w-[170px]"
+          />
           <p className="text-sm max-w-[260px] mb-6">
             Experience world-class transport of massive industrial loads — safely, globally and on time.
           </p>
@@ -298,7 +298,7 @@ export default function Navbar() {
           <span className="tracking-widest text-lg"></span>
 
           <span className="text-[12px] cursor-pointer"
-          onClick={() => window.open("https://wa.me/966582780836", "_blank")}>CONTACT</span>
+            onClick={() => window.open("https://wa.me/966582780836", "_blank")}>CONTACT</span>
         </div>
 
         <div className="relative overflow-hidden h-full">

@@ -7,6 +7,7 @@ import Seafeatures from "../Components/Seafeatures";
 import Banner from "../Components/Banner";
 import Seaadd from "../Components/Seaadd";
 import Seafaq from "../Components/Seafaq";
+import SEO from "../Components/SEO";
 
 export default function Road() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -47,6 +48,12 @@ export default function Road() {
 
     return (
         <>
+        <SEO
+  title="Sea Freight Services Saudi Arabia | Luke Shipping"
+  description="Reliable sea freight forwarding and ocean cargo transportation solutions across Saudi Arabia and GCC."
+  keywords="sea freight Saudi Arabia, ocean cargo services GCC, freight forwarding Dammam, container shipping services, international sea logistics"
+  url="https://lukeshipping.com/sea"
+/>
             {/* HERO SECTION */}
             <section className="h-screen relative overflow-hidden">
 

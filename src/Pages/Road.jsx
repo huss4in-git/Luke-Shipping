@@ -7,6 +7,7 @@ import Roadinfo from "../Components/Roadinfo";
 import Roadfeatures from "../Components/Roadfeatures";
 import Roadadd from "../Components/Roadadd";
 import Banner from "../Components/Banner";
+import SEO from "../Components/SEO";
 
 export default function Road() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -48,6 +49,12 @@ export default function Road() {
 
     return (
         <>
+       <SEO
+  title="Road Freight Services Saudi Arabia | Luke Shipping"
+  description="Reliable GCC road freight and trucking services for industrial and commercial cargo transportation."
+  keywords="road freight Saudi Arabia, trucking services GCC, cargo transport Dammam"
+  url="https://lukeshipping.com/road"
+/>
             {/* HERO SECTION */}
             <section className="h-screen relative overflow-hidden">
 

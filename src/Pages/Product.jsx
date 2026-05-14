@@ -6,6 +6,7 @@ import Banner from "../Components/Banner";
 import Inspectionsection from "../Components/Inspectionsection";
 import Productsection from "../Components/Productsection";
 import { Link } from 'react-router-dom';
+import SEO from "../Components/SEO";
 
 export default function Product() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -97,6 +98,12 @@ export default function Product() {
 
     return (
         <>
+        <SEO
+  title="Product Certification Services Saudi Arabia | Luke Shipping TIC"
+  description="Reliable product testing, certification, and compliance solutions for industrial and commercial products."
+  keywords="product certification Saudi Arabia, compliance certification GCC, industrial product testing"
+  url="https://lukeshipping.com/product"
+/>
             {/* ── NAVBAR ─────────────────────────────────────────── */}
             <nav
                 className={`fixed top-0 left-0 w-full z-[999] text-[12px] transition-all duration-500 transform ${

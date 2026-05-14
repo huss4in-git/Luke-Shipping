@@ -7,6 +7,7 @@ import Banner from "../Components/Banner";
 import Aboutusfirst from "../Components/Aboutusfirst";
 import Aboutussecond from "../Components/Aboutussecond";
 import Aboutquality from "../Components/Aboutquality";
+import SEO from "../Components/SEO";
 
 export default function Aboutus() {
   const [shopOpen, setShopOpen] = useState(false);

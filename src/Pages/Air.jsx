@@ -8,6 +8,7 @@ import Airfeatures from "../Components/Airfeatures";
 import Airadd from "../Components/Airadd";
 import Airfaq from "../Components/Airfaq";
 import { Link } from 'react-router-dom';
+import SEO from "../Components/SEO";
 
 export default function Road() {
     const [shopOpen, setShopOpen] = useState(false);
@@ -49,6 +50,12 @@ export default function Road() {
 
     return (
         <>
+        <SEO
+  title="Air Freight Services GCC | Luke Shipping"
+  description="Fast and secure international air freight solutions across Saudi Arabia and GCC."
+  keywords="air freight Saudi Arabia, cargo air shipping GCC, international logistics"
+  url="https://lukeshipping.com/air"
+/>
             {/* HERO SECTION */}
             <section className="h-screen relative overflow-hidden">
 

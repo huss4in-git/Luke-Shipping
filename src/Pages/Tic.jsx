@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
 import Ticservice from "../Components/Ticservice";
+import SEO from "../Components/SEO";
 
 export default function Tic() {
     const [shopOpen, setShopOpen] = useState(false);

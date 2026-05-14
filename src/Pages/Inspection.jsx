@@ -6,6 +6,7 @@ import Banner from "../Components/Banner";
 import Inspectionsection from "../Components/Inspectionsection";
 import Inspectionsecond from "../Components/Inspectionsecond";
 import { Link } from 'react-router-dom';
+import SEO from "../Components/SEO";
 
 export default function Inspection() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -97,6 +98,12 @@ export default function Inspection() {
 
     return (
         <>
+        <SEO
+  title="Inspection Services Saudi Arabia | Luke Shipping TIC"
+  description="Reliable industrial inspection and quality assurance services across GCC."
+  keywords="inspection services Saudi Arabia, industrial inspection GCC, quality assurance inspection"
+  url="https://lukeshipping.com/inspection"
+/>
             {/* ── NAVBAR ─────────────────────────────────────────── */}
             <nav
                 className={`fixed top-0 left-0 w-full z-[999] text-[12px] transition-all duration-500 transform ${
