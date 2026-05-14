@@ -208,6 +208,7 @@ export default function QuoteModal() {
     const [step, setStep] = useState(1);
     const [freight, setFreight] = useState(null);
     const [containerSize, setContainerSize] = useState(null);
+    const [containerQty, setContainerQty] = useState(1);
     const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState({});
     const [countryCode, setCountryCode] = useState("+91");
@@ -230,7 +231,6 @@ export default function QuoteModal() {
         } else {
             if (window.lenis) window.lenis.start();
         }
-
         return () => {
             if (window.lenis) window.lenis.start();
         };
@@ -292,7 +292,7 @@ export default function QuoteModal() {
                 origin: form.origin,
                 destination: form.destination,
                 freight_type: freight,
-                container_size: containerSize,
+                container_size: `${containerQty}x ${containerSize}`,
                 cargo_type: form.cargoType,
                 weight: form.weight,
                 incoterm: form.incoterm,
@@ -308,6 +308,7 @@ export default function QuoteModal() {
                     setStep(1);
                     setFreight(null);
                     setContainerSize(null);
+                    setContainerQty(1);
                     setCountryCode("+91");
                     setErrors({});
                     setForm({ origin: "", destination: "", weight: "", incoterm: "", cargoType: "", name: "", company: "", email: "", phone: "", shipmentDate: "", notes: "" });
@@ -460,6 +461,39 @@ export default function QuoteModal() {
                                     ))}
                                 </div>
                                 {errors.containerSize && <p style={errorStyle}>{errors.containerSize}</p>}
+                            </div>
+
+                            {/* NUMBER OF CONTAINERS */}
+                            <div>
+                                <label style={labelStyle}>Number of Containers</label>
+                                <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "8px" }}>
+                                    <button
+                                        onClick={() => setContainerQty(q => Math.max(1, q - 1))}
+                                        style={{
+                                            width: "36px", height: "36px", borderRadius: "8px",
+                                            border: "1.5px solid #e5e5e5", background: "#fff",
+                                            fontSize: "18px", cursor: "pointer", color: "#111",
+                                            display: "flex", alignItems: "center", justifyContent: "center",
+                                            flexShrink: 0,
+                                        }}
+                                    >−</button>
+                                    <span style={{ fontSize: "15px", fontWeight: 500, color: "#111", minWidth: "24px", textAlign: "center" }}>
+                                        {containerQty}
+                                    </span>
+                                    <button
+                                        onClick={() => setContainerQty(q => Math.min(50, q + 1))}
+                                        style={{
+                                            width: "36px", height: "36px", borderRadius: "8px",
+                                            border: "1.5px solid #e5e5e5", background: "#fff",
+                                            fontSize: "18px", cursor: "pointer", color: "#111",
+                                            display: "flex", alignItems: "center", justifyContent: "center",
+                                            flexShrink: 0,
+                                        }}
+                                    >+</button>
+                                    <span style={{ fontSize: "11px", color: "#aaa", letterSpacing: "0.04em" }}>
+                                        MAX 50
+                                    </span>
+                                </div>
                             </div>
 
                             <div>
