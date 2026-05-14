@@ -353,6 +353,7 @@ export default function QuoteModal() {
                             </h2>
                         </div>
                         <button
+                            type="button"
                             onClick={onClose}
                             style={{ background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: "#999", lineHeight: 1, padding: "2px 0 0" }}
                         >✕</button>
@@ -432,7 +433,7 @@ export default function QuoteModal() {
                                 {errors.freight && <p style={errorStyle}>{errors.freight}</p>}
                             </div>
 
-                            <button style={primaryBtn} onClick={handleStep1Continue}>Continue</button>
+                            <button type="button" style={primaryBtn} onClick={handleStep1Continue}>Continue</button>
                         </div>
                     )}
 
@@ -468,6 +469,7 @@ export default function QuoteModal() {
                                 <label style={labelStyle}>Number of Containers</label>
                                 <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "8px" }}>
                                     <button
+                                        type="button"
                                         onClick={() => setContainerQty(q => Math.max(1, q - 1))}
                                         style={{
                                             width: "36px", height: "36px", borderRadius: "8px",
@@ -481,6 +483,7 @@ export default function QuoteModal() {
                                         {containerQty}
                                     </span>
                                     <button
+                                        type="button"
                                         onClick={() => setContainerQty(q => Math.min(50, q + 1))}
                                         style={{
                                             width: "36px", height: "36px", borderRadius: "8px",
@@ -537,8 +540,8 @@ export default function QuoteModal() {
                             </div>
 
                             <div style={{ display: "flex", gap: "10px" }}>
-                                <button style={secondaryBtn} onClick={() => setStep(1)}>← Back</button>
-                                <button style={{ ...primaryBtn, flex: 2 }} onClick={handleStep2Continue}>Continue</button>
+                                <button type="button" style={secondaryBtn} onClick={() => setStep(1)}>← Back</button>
+                                <button type="button" style={{ ...primaryBtn, flex: 2 }} onClick={handleStep2Continue}>Continue</button>
                             </div>
                         </div>
                     )}
@@ -652,8 +655,9 @@ export default function QuoteModal() {
                             )}
 
                             <div style={{ display: "flex", gap: "10px" }}>
-                                <button style={secondaryBtn} onClick={() => setStep(2)}>← Back</button>
+                                <button type="button" style={secondaryBtn} onClick={() => setStep(2)}>← Back</button>
                                 <button
+                                    type="button"
                                     style={{ ...primaryBtn, flex: 2, background: "#111", color: "#FD9708" }}
                                     onClick={handleSubmit}
                                 >Submit Request</button>
